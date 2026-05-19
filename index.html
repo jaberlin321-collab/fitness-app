@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="description" content="个人健身助手 - 记录训练、跟踪进步、达成成就">
+<link rel="icon" href="data:image/png;base64,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">
+<title>健身助手</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#FFFFFF;--bg2:#F5F5F5;
+  --text:#111111;--text2:#666666;--text3:#999999;
+  --accent:#000000;--border:#E5E5E5;
+  --success:#00C853;--warning:#FF9800;
+  --radius:16px;--radius-sm:12px;--radius-xs:8px;
+}
+html{font-size:16px}
+body{
+  font-family:system-ui,-apple-system,"PingFang SC","Helvetica Neue",sans-serif;
+  background:var(--bg);color:var(--text);min-height:100dvh;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Header */
+.app-header{
+  position:sticky;top:0;z-index:100;
+  padding:14px 20px;padding-top:max(14px,env(safe-area-inset-top));
+  background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.app-header h1{font-size:1.15rem;font-weight:700;letter-spacing:-0.3px}
+.header-streak{display:flex;align-items:center;gap:5px;font-size:0.85rem;font-weight:600}
+.header-streak .flame{font-size:1.1rem;animation:flamePulse 0.8s ease-in-out infinite alternate}
+@keyframes flamePulse{0%{transform:scale(1)}100%{transform:scale(1.25);filter:drop-shadow(0 0 6px #FF9800)}}
+
+/* Navigation */
+.nav-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-around;align-items:center;
+  padding:6px 0;padding-bottom:max(6px,env(safe-area-inset-bottom));
+  background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-top:1px solid var(--border);
+}
+.nav-item{
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:6px 12px;border:none;background:none;
+  color:var(--text3);cursor:pointer;transition:all 0.15s;
+  font-size:0.65rem;font-weight:500;font-family:inherit;
+}
+.nav-item .nav-icon{font-size:1.25rem;transition:transform 0.15s}
+.nav-item:active{transform:scale(0.94)}
+.nav-item.active{color:var(--accent);font-weight:700}
+.nav-item.active .nav-icon{transform:scale(1.1)}
+
+/* Pages */
+.page-container{padding-bottom:80px}
+.page{display:none;padding:0 16px;animation:pageIn 0.28s cubic-bezier(0.22,0.61,0.36,1)}
+.page.active{display:block}
+@keyframes pageIn{0%{opacity:0;transform:translateX(24px)}100%{opacity:1;transform:translateX(0)}}
+
+/* Section Title */
+.section-title{
+  font-size:1.25rem;font-weight:700;letter-spacing:-0.3px;
+  margin:20px 0 12px;display:flex;align-items:center;gap:8px;
+}
+.section-title-sm{font-size:1rem;font-weight:700;margin:16px 0 8px}
+
+/* Card */
+.card{
+  background:var(--bg);border-radius:var(--radius);
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
+  padding:16px;margin-bottom:12px;
+  transition:transform 0.15s,box-shadow 0.15s;
+}
+.card:active{transform:scale(0.985);box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.card-flush{padding:0;overflow:hidden}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:14px 24px;border-radius:var(--radius-sm);border:none;
+  font-size:0.95rem;font-weight:700;font-family:inherit;
+  cursor:pointer;transition:all 0.15s;letter-spacing:0.1px;
+}
+.btn:active{transform:scale(0.96)}
+.btn-primary{background:var(--accent);color:#fff;width:100%}
+.btn-secondary{background:var(--bg);color:var(--accent);border:2px solid var(--accent)}
+.btn-sm{padding:8px 16px;font-size:0.8rem;width:auto}
+.btn-block{width:100%}
+
+/* Chips */
+.chip-row{display:flex;gap:8px;overflow-x:auto;padding:4px 0;scrollbar-width:none;-ms-overflow-style:none}
+.chip-row::-webkit-scrollbar{display:none}
+.chip{
+  flex-shrink:0;padding:8px 18px;border-radius:20px;
+  border:1.5px solid var(--border);background:var(--bg);
+  color:var(--text2);font-size:0.83rem;font-weight:500;
+  cursor:pointer;transition:all 0.15s;font-family:inherit;white-space:nowrap;
+}
+.chip:active{transform:scale(0.95)}
+.chip.active{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
+
+/* Input */
+input,textarea,select{
+  width:100%;padding:12px 14px;border-radius:var(--radius-xs);
+  border:1.5px solid var(--border);background:var(--bg2);
+  color:var(--text);font-size:0.92rem;font-family:inherit;
+  outline:none;transition:border-color 0.15s;-webkit-appearance:none;
+}
+input:focus,textarea:focus,select:focus{border-color:var(--accent);background:var(--bg)}
+textarea{resize:vertical;min-height:60px}
+label{display:block;font-size:0.8rem;color:var(--text2);margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+
+/* Home - Greeting */
+.greeting{font-size:1.75rem;font-weight:700;letter-spacing:-0.5px;line-height:1.2}
+.greeting-sub{font-size:0.92rem;color:var(--text2);margin-top:4px}
+
+/* Home - Body Part Grid */
+.part-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.part-card{
+  background:var(--bg);border-radius:var(--radius);
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
+  padding:20px 16px;cursor:pointer;transition:all 0.15s;
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  text-align:center;border:2px solid transparent;
+}
+.part-card:active{transform:scale(0.96);box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.part-card .part-emoji{font-size:2.4rem}
+.part-card .part-name{font-weight:700;font-size:0.95rem}
+.part-card .part-count{font-size:0.72rem;color:var(--text3)}
+
+/* Exercise List */
+.exercise-item{
+  display:flex;align-items:center;gap:14px;padding:14px 0;
+  border-bottom:1px solid var(--border);cursor:pointer;
+  transition:background 0.1s;
+}
+.exercise-item:active{background:var(--bg2);margin:0 -16px;padding-left:16px;padding-right:16px}
+.exercise-thumb{
+  width:52px;height:52px;border-radius:var(--radius-xs);
+  background:var(--bg2);display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;flex-shrink:0;
+}
+.exercise-info{flex:1;min-width:0}
+.exercise-name{font-weight:700;font-size:0.93rem}
+.exercise-name-en{font-size:0.73rem;color:var(--text3)}
+.exercise-meta{display:flex;gap:6px;margin-top:3px}
+.tag{
+  font-size:0.68rem;padding:2px 8px;border-radius:4px;
+  background:var(--bg2);color:var(--text2);font-weight:500;
+}
+
+/* Exercise Detail */
+.exercise-detail{display:none;background:var(--bg)}
+.exercise-detail.open{display:block}
+.exercise-detail-img{
+  width:100%;height:220px;object-fit:cover;
+  background:var(--bg2);border-radius:0;
+}
+.detail-card{
+  background:var(--bg);border-radius:var(--radius) var(--radius) 0 0;
+  margin-top:-16px;position:relative;z-index:1;
+  padding:20px 16px;box-shadow:0 -4px 20px rgba(0,0,0,0.06);
+}
+.detail-title{font-size:1.4rem;font-weight:700;letter-spacing:-0.3px}
+.detail-subtitle{font-size:0.85rem;color:var(--text3);margin-bottom:16px}
+.detail-section{margin-bottom:14px}
+.detail-section h4{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px}
+.detail-section p,.detail-section li{font-size:0.88rem;color:var(--text2);line-height:1.55}
+.detail-section ul,.detail-section ol{padding-left:18px}
+.detail-section li{margin-bottom:3px}
+
+/* Training Set Row */
+.set-row{
+  display:grid;grid-template-columns:40px 1fr 1fr 36px;
+  gap:8px;align-items:center;margin-bottom:8px;
+  padding:6px 0;border-bottom:1px solid var(--bg2);
+}
+.set-row .set-num{font-size:0.75rem;color:var(--text3);font-weight:600;text-align:center}
+.set-row input{text-align:center;padding:10px 4px;font-size:0.9rem;font-weight:500}
+.set-done{
+  width:32px;height:32px;border-radius:50%;border:2px solid var(--border);
+  background:var(--bg);display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:0.8rem;transition:all 0.15s;
+}
+.set-done.done{background:var(--success);border-color:var(--success);color:#fff}
+
+/* Timer Overlay */
+.timer-overlay{
+  display:none;position:fixed;inset:0;z-index:200;
+  background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  justify-content:center;align-items:center;flex-direction:column
+}
+.timer-overlay.show{display:flex}
+.timer-ring{
+  width:180px;height:180px;border-radius:50%;
+  border:4px solid var(--accent);background:#fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  margin-bottom:24px;
+}
+.timer-time{font-size:3.2rem;font-weight:700;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.timer-label{font-size:0.78rem;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.timer-btns{display:flex;gap:8px;margin-bottom:16px}
+.timer-btns .chip{padding:10px 18px;border-radius:24px}
+
+/* PR Badge */
+.pr-badge{
+  display:inline-flex;align-items:center;gap:4px;
+  padding:4px 10px;border-radius:6px;
+  background:var(--success);color:#fff;
+  font-size:0.72rem;font-weight:700;
+  animation:prPulse 1.2s ease infinite alternate;
+}
+@keyframes prPulse{0%{box-shadow:0 0 4px rgba(0,200,83,0.4)}100%{box-shadow:0 0 16px rgba(0,200,83,0.7),0 0 32px rgba(0,200,83,0.3)}}
+
+/* Confetti */
+#confetti-canvas{position:fixed;inset:0;z-index:300;pointer-events:none;display:none}
+
+/* Calendar Heatmap */
+.heatmap-wrap{overflow-x:auto;padding:4px 0}
+.heatmap-grid{display:flex;gap:3px;flex-wrap:wrap;min-width:fit-content}
+.heatmap-cell{
+  width:14px;height:14px;border-radius:3px;
+  background:var(--bg2)
+}
+.heatmap-cell.l1{background:#C8E6C9}
+.heatmap-cell.l2{background:#66BB6A}
+.heatmap-cell.l3{background:#2E7D32}
+.heatmap-cell.l4{background:#1B5E20}
+
+/* Achievements */
+.achieve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.achieve-item{
+  text-align:center;padding:16px 8px;border-radius:var(--radius);
+  background:var(--bg);border:1.5px solid var(--border);
+  transition:all 0.2s;
+}
+.achieve-item.unlocked{border-color:var(--success);background:#F1F8E9}
+.achieve-icon{font-size:2rem;margin-bottom:4px}
+.achieve-item.unlocked .achieve-icon{animation:achieveBounce 0.6s ease}
+.achieve-name{font-size:0.7rem;font-weight:600;line-height:1.2}
+.achieve-item:not(.unlocked) .achieve-icon{filter:grayscale(1);opacity:0.35}
+.achieve-item:not(.unlocked) .achieve-name{color:var(--text3)}
+@keyframes achieveBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+
+/* Progress Bar */
+.progress-wrap{
+  background:var(--bg2);border-radius:6px;height:8px;
+  overflow:hidden;margin:8px 0;
+}
+.progress-fill{
+  height:100%;border-radius:6px;background:var(--accent);
+  transition:width 0.5s cubic-bezier(0.22,0.61,0.36,1);
+}
+
+/* Stats */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat-card{
+  background:var(--bg);border-radius:var(--radius);
+  box-shadow:0 2px 12px rgba(0,0,0,0.08);
+  padding:18px 16px;text-align:center;
+}
+.stat-value{font-size:2rem;font-weight:700;letter-spacing:-1px}
+.stat-label{font-size:0.73rem;color:var(--text3);margin-top:2px;font-weight:500}
+
+/* History */
+.history-item{margin-bottom:6px}
+.history-header{
+  display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;padding:12px 0;
+}
+.history-date{font-weight:600;font-size:0.9rem}
+.history-body{font-size:0.78rem;color:var(--text2)}
+.history-detail{display:none;padding:0 0 12px;font-size:0.83rem;color:var(--text2)}
+.history-detail.open{display:block}
+
+/* Search */
+.search-wrap{position:relative;margin-bottom:16px}
+.search-wrap .search-icon{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  font-size:1rem;color:var(--text3);z-index:2;
+}
+.search-wrap input{padding-left:42px;background:var(--bg2);border-radius:var(--radius-sm)}
+
+/* Modal */
+.modal-overlay{
+  display:none;position:fixed;inset:0;z-index:150;
+  background:rgba(0,0,0,0.4);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+  justify-content:center;align-items:flex-end;padding:0;
+}
+.modal-overlay.show{display:flex}
+.modal-content{
+  background:var(--bg);border-radius:20px 20px 0 0;
+  padding:24px 20px;width:100%;max-height:75vh;
+  overflow-y:auto;box-shadow:0 -8px 40px rgba(0,0,0,0.15);
+  animation:slideUp 0.25s cubic-bezier(0.22,0.61,0.36,1);
+}
+@keyframes slideUp{0%{transform:translateY(100%)}100%{transform:translateY(0)}}
+.modal-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px}
+.modal-content h3{font-size:1.15rem;font-weight:700;margin-bottom:12px}
+
+/* Toast */
+.toast{
+  position:fixed;top:60px;left:50%;transform:translateX(-50%);z-index:400;
+  padding:12px 24px;border-radius:24px;background:var(--accent);color:#fff;
+  font-weight:600;font-size:0.88rem;opacity:0;transition:opacity 0.3s;
+  pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);
+}
+.toast.show{opacity:1}
+
+/* Empty State */
+.empty-state{text-align:center;padding:48px 20px;color:var(--text3)}
+.empty-state .empty-icon{font-size:3rem;margin-bottom:10px}
+
+/* Back button */
+.back-btn{
+  display:flex;align-items:center;gap:6px;background:none;border:none;
+  font-size:0.9rem;font-weight:600;font-family:inherit;cursor:pointer;
+  color:var(--accent);padding:8px 0;margin-bottom:8px;
+}
+
+/* Misc */
+.hidden{display:none!important}
+.mt8{margin-top:8px}.mt12{margin-top:12px}.mt16{margin-top:16px}.mb8{margin-bottom:8px}.mb16{margin-bottom:16px}
+.text-center{text-align:center}.text-dim{color:var(--text2)}.text-xs{font-size:0.73rem}
+.flex-between{display:flex;justify-content:space-between;align-items:center}
+.gap8{gap:8px}.gap12{gap:12px}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <h1>健身助手</h1>
+  <div class="header-streak" id="headerStreak">
+    <span class="flame">🔥</span><span id="streakCount">0</span>
+  </div>
+</header>
+
+<div class="page-container" id="pageContainer">
+
+  <!-- ===== PAGE 1: HOME ===== -->
+  <div class="page active" id="page-home">
+    <div style="padding-top:12px">
+      <div class="greeting" id="greetingText">今天练什么？</div>
+      <div class="greeting-sub" id="greetingSub"></div>
+    </div>
+
+    <div class="card" id="aiPlannerCard" style="margin-top:16px;cursor:pointer" onclick="showAIPlanner()">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="font-size:2rem">🤖</span>
+        <div style="flex:1">
+          <div style="font-weight:700;font-size:0.95rem">让 AI 帮你安排今天的训练</div>
+          <div style="font-size:0.78rem;color:var(--text3)">智能生成个性化训练计划</div>
+        </div>
+        <span style="font-size:1.2rem;color:var(--text3)">→</span>
+      </div>
+    </div>
+
+    <div class="section-title">选择训练部位</div>
+    <div class="part-grid" id="homePartGrid"></div>
+
+    <div class="section-title">📅 本周挑战</div>
+    <div class="card">
+      <div class="flex-between mb8">
+        <span style="font-weight:700;font-size:0.9rem">完成 <span id="homeWeeklyCount">0</span>/3 次训练</span>
+        <span id="homeWeeklyBadge" style="font-size:1.1rem"></span>
+      </div>
+      <div class="progress-wrap"><div class="progress-fill" id="homeWeeklyBar" style="width:0%"></div></div>
+    </div>
+
+    <div class="section-title">📊 本周概览</div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value" id="homeDays">0</div><div class="stat-label">训练天数</div></div>
+      <div class="stat-card"><div class="stat-value" id="homeSets">0</div><div class="stat-label">完成组数</div></div>
+    </div>
+
+    <div class="section-title">🏆 最新成就</div>
+    <div id="homeAchievements"></div>
+  </div>
+
+  <!-- ===== PAGE 2: TRAINING ===== -->
+  <div class="page" id="page-training">
+    <div id="trainingContent"></div>
+  </div>
+
+  <!-- ===== PAGE 3: EXERCISE LIBRARY ===== -->
+  <div class="page" id="page-library">
+    <div style="padding-top:8px">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="搜索动作...">
+      </div>
+      <div class="chip-row" id="libraryChips"></div>
+      <div id="exerciseListView"></div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE 4: STATS ===== -->
+  <div class="page" id="page-stats">
+    <div style="padding-top:8px">
+      <div class="section-title" style="margin-top:0">📈 重量进步</div>
+      <select id="progressExercise" style="margin-bottom:10px">
+        <option value="">选择动作...</option>
+      </select>
+      <div class="card" style="height:220px;position:relative"><canvas id="progressChart"></canvas></div>
+
+      <div class="section-title">🔥 训练热力图</div>
+      <div class="card">
+        <div class="heatmap-wrap"><div class="heatmap-grid" id="heatmapGrid"></div></div>
+        <div style="display:flex;justify-content:flex-end;align-items:center;gap:4px;margin-top:8px;font-size:0.65rem;color:var(--text3)">
+          少▫️🟩🟩🟩🟩多
+        </div>
+      </div>
+
+      <div class="section-title">🥧 部位分布</div>
+      <div class="card" style="height:220px;position:relative"><canvas id="pieChart"></canvas></div>
+
+      <div class="section-title">🏆 成就徽章</div>
+      <div class="achieve-grid" id="achieveGrid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="nav-bar">
+  <button class="nav-item active" data-page="home">
+    <span class="nav-icon">🏠</span>首页
+  </button>
+  <button class="nav-item" data-page="training">
+    <span class="nav-icon">🏋️</span>训练
+  </button>
+  <button class="nav-item" data-page="library">
+    <span class="nav-icon">📋</span>动作库
+  </button>
+  <button class="nav-item" data-page="stats">
+    <span class="nav-icon">📊</span>统计
+  </button>
+</nav>
+
+<!-- Timer Overlay -->
+<div class="timer-overlay" id="timerOverlay">
+  <div class="timer-ring">
+    <div class="timer-time" id="timerTime">90</div>
+    <div class="timer-label">秒</div>
+  </div>
+  <div class="timer-btns">
+    <button class="chip" data-sec="60">60秒</button>
+    <button class="chip active" data-sec="90">90秒</button>
+    <button class="chip" data-sec="120">120秒</button>
+  </div>
+  <button class="btn btn-primary" id="btnTimerSkip" style="width:200px">跳过休息</button>
+</div>
+
+<!-- Confetti -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content" id="modalContent"><div class="modal-handle"></div></div>
+</div>
+
+<script>
+// ============ DATA LAYER ============
+const STORAGE = {
+  get(k, def) { try { const v = localStorage.getItem('ft_'+k); return v ? JSON.parse(v) : def; } catch { return def; } },
+  set(k, v) { localStorage.setItem('ft_'+k, JSON.stringify(v)); }
+};
+function getLogs() { return STORAGE.get('logs', []); }
+function saveLogs(l) { STORAGE.set('logs', l); }
+function getStreak() { return STORAGE.get('streak', { current:0, longest:0, lastDate:null }); }
+function saveStreak(s) { STORAGE.set('streak', s); }
+function getAchievements() { return STORAGE.get('achievements', []); }
+function saveAchievements(a) { STORAGE.set('achievements', a); }
+
+// ============ EXERCISE DATABASE ============
+const EXERCISES = [
+  // 练背
+  {id:'pull-up',name:'引体向上',nameEn:'Pull-Up',part:'练背',muscle:'背阔肌、肱二头肌',equip:'单杠',altEquip:'弹力带辅助 / 高位下拉机',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/pull-up.gif',steps:['正手握杠，握距略比肩宽','肩胛骨收紧，核心紧绷','背部发力将身体上拉，下巴过杠','控制身体缓慢下放至手臂伸直'],mistakes:['借力摆荡','耸肩代偿','下放过快','下巴未过杠'],tips:['先做肩胛骨激活训练','下放过程持续3-4秒','轻握弹力带辅助减重']},
+  {id:'lat-pulldown',name:'坐姿绳索下拉',nameEn:'Lat Pulldown',part:'练背',muscle:'背阔肌、大圆肌',equip:'高位下拉机',altEquip:'弹力带 + 固定锚点',sets:'3-4',reps:'10-15',gif:'https://muscles.wiki/assets/exercises/lat-pulldown.gif',steps:['坐稳，大腿卡住护垫','正手宽握横杆','背部发力下拉至锁骨位置','缓慢还原至手臂伸直'],mistakes:['身体过度后仰','借力猛拉','还原过快'],tips:['下拉时胸部上挺','想象肘部向臀部方向拉','控制节奏2-1-3']},
+  {id:'seated-row',name:'坐姿划船',nameEn:'Seated Cable Row',part:'练背',muscle:'中背部、菱形肌',equip:'坐姿划船机',altEquip:'弹力带坐姿划船',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/seated-cable-row.gif',steps:['双脚踩踏板，膝盖微屈','双手握住V把，背部挺直','肩胛骨内收，将把手拉向腹部','控制还原，感受背部拉伸'],mistakes:['弓背含胸','身体过度后仰借力','耸肩'],tips:['先做肩胛骨后缩再拉','顶峰收缩1-2秒','腰背始终挺直']},
+  {id:'single-arm-dumbbell-row',name:'单臂哑铃划船',nameEn:'One-Arm Dumbbell Row',part:'练背',muscle:'背阔肌（单侧）、菱形肌',equip:'哑铃 + 平板凳',altEquip:'壶铃 / 弹力带固定后拉',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/one-arm-dumbbell-row.gif',steps:['一侧膝盖和手掌撑在凳上','另一只手持哑铃自然下垂','背部发力将哑铃拉向髋部','顶峰收缩后缓慢下放'],mistakes:['用肱二头肌发力','身体旋转借力','弓背'],tips:['想象肘部向天花板方向拉','下放时充分拉伸背阔肌','保持头部与脊柱一条线']},
+  {id:'deadlift',name:'硬拉',nameEn:'Deadlift',part:'练背',muscle:'竖脊肌、臀大肌、腘绳肌',equip:'杠铃',altEquip:'哑铃硬拉 / 壶铃硬拉',sets:'3-4',reps:'6-10',gif:'https://muscles.wiki/assets/exercises/deadlift.gif',steps:['双脚与髋同宽，杠铃贴近小腿','屈髋屈膝，双手正握杠铃','核心收紧，背部挺直','同时伸髋伸膝站起','沿腿部轨迹缓慢下放'],mistakes:['弓背圆肩','杠铃远离身体','先抬臀再拉背','过度后仰'],tips:['始终贴着小腿上升','想象双脚蹬地发力','穿戴腰带更安全']},
+  {id:'barbell-row',name:'俯身杠铃划船',nameEn:'Barbell Row',part:'练背',muscle:'背阔肌、菱形肌、竖脊肌',equip:'杠铃',altEquip:'哑铃俯身划船 / T杆划船',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/barbell-row.gif',steps:['双脚与肩同宽，微屈膝','俯身至躯干与地面约45°','正手握住杠铃','将杠铃沿大腿方向拉向腹部','控制还原'],mistakes:['弓背','身体起伏借力','握距过宽或过窄'],tips:['核心始终收紧保护腰椎','不要用爆发力猛拉','手肘贴近身体']},
+  // 练腿
+  {id:'squat',name:'深蹲',nameEn:'Squat',part:'练腿',muscle:'股四头肌、臀大肌、腘绳肌',equip:'杠铃（自由重量）',altEquip:'哑铃高脚杯深蹲 / 自重深蹲',sets:'3-5',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/squat.gif',steps:['杠铃置于斜方肌上方','双脚略宽于肩，脚尖微外八','核心收紧，屈髋屈膝下蹲','大腿低于平行线后站起'],mistakes:['膝盖内扣','脚跟离地','弓背','深度不够'],tips:['想象脚掌抓地','膝盖方向与脚尖一致','下蹲前先吸气收紧核心']},
+  {id:'leg-press',name:'腿举',nameEn:'Leg Press',part:'练腿',muscle:'股四头肌、臀大肌',equip:'腿举机',altEquip:'哑铃高脚杯深蹲',sets:'3-4',reps:'10-15',gif:'https://muscles.wiki/assets/exercises/leg-press.gif',steps:['坐好，背部贴紧靠背','双脚放在踏板上与肩同宽','解锁安全杆，屈膝下放','蹬至膝盖微屈不锁死'],mistakes:['膝盖完全锁死','臀部离开靠背','脚位过高或过低'],tips:['全程臀部贴紧靠背','顶峰不要锁死膝盖','改变脚位刺激不同肌群']},
+  {id:'romanian-deadlift',name:'罗马尼亚硬拉',nameEn:'Romanian Deadlift',part:'练腿',muscle:'腘绳肌、臀大肌',equip:'杠铃',altEquip:'哑铃罗马尼亚硬拉',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/romanian-deadlift.gif',steps:['双脚与髋同宽，微屈膝','持杠铃于大腿前方','保持背部挺直，屈髋将杠铃降低','感受腘绳肌拉伸后伸髋站起'],mistakes:['弓背','膝盖弯曲过度','杠铃远离身体'],tips:['微屈膝保持不变','贴着腿部下放','感受到拉伸感即停']},
+  {id:'leg-curl',name:'腿弯举',nameEn:'Leg Curl',part:'练腿',muscle:'腘绳肌',equip:'腿弯举机',altEquip:'弹力带腿弯举 / 瑜伽球腿弯举',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/leg-curl.gif',steps:['俯卧在腿弯举机上','脚踝放在滚垫下方','弯举双腿至最大幅度','缓慢还原'],mistakes:['借力猛甩','还原过快','髋部离开凳面'],tips:['顶峰收缩1-2秒','还原过程持续3秒','双脚可做不同角度']},
+  {id:'leg-extension',name:'腿伸展',nameEn:'Leg Extension',part:'练腿',muscle:'股四头肌',equip:'腿伸展机',altEquip:'弹力带坐姿腿伸展',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/leg-extension.gif',steps:['调好靠背和脚踝滚垫','双腿伸展至膝盖完全伸直','顶峰收缩1秒','缓慢还原'],mistakes:['膝盖锁死过猛','借力摆动','还原过快'],tips:['顶峰停留感受肌肉收缩','脚尖可微内旋或外旋','不要用惯性']},
+  {id:'bulgarian-split-squat',name:'保加利亚分腿蹲',nameEn:'Bulgarian Split Squat',part:'练腿',muscle:'股四头肌、臀大肌（单侧）',equip:'哑铃 + 平板凳',altEquip:'自重保加利亚蹲',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/bulgarian-split-squat.gif',steps:['后脚背放在凳上','前脚向前迈出足够距离','持哑铃于体侧','屈前膝下蹲至大腿平行'],mistakes:['前膝过度超过脚尖','重心不稳','弓背'],tips:['躯干略微前倾','专注于前腿发力','先自重掌握平衡']},
+  {id:'calf-raise',name:'小腿提踵',nameEn:'Calf Raise',part:'练腿',muscle:'腓肠肌、比目鱼肌',equip:'提踵机 / 史密斯机',altEquip:'哑铃单腿提踵 / 台阶自重提踵',sets:'4-5',reps:'15-20',gif:'https://muscles.wiki/assets/exercises/calf-raise.gif',steps:['脚掌踩在踏板上，脚跟悬空','身体直立保持稳定','尽可能高地提起脚跟','缓慢下放至脚跟低于踏板'],mistakes:['动作过快','幅度不够','膝盖弯曲借力'],tips:['下放过程充分拉伸','顶峰停顿1秒','膝盖微屈不分腿']},
+  // 练胸
+  {id:'bench-press',name:'平板杠铃卧推',nameEn:'Bench Press',part:'练胸',muscle:'胸大肌、肱三头肌、三角肌前束',equip:'杠铃 + 平板凳',altEquip:'哑铃平板卧推',sets:'3-5',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/bench-press.gif',steps:['平躺在凳上，眼睛在杠铃下方','握距略宽于肩','出杠后吸气收紧核心','缓慢下放杠铃至胸中部','推起至手臂伸直'],mistakes:['弹胸借力','肩膀离开凳面','握距过宽伤肩','脚不踩实'],tips:['肩胛骨始终收紧','脚掌踩实地面','想象把身体推离杠铃']},
+  {id:'incline-dumbbell-press',name:'上斜哑铃卧推',nameEn:'Incline Dumbbell Press',part:'练胸',muscle:'胸大肌上部、三角肌前束',equip:'哑铃 + 可调凳（30-45°）',altEquip:'上斜杠铃卧推',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/incline-dumbbell-press.gif',steps:['调整凳角度30-45°','持哑铃于大腿上，后躺举起','哑铃与胸上部对齐','推起至手臂伸直','缓慢下放至胸两侧'],mistakes:['凳面角度过高变肩推','手腕弯曲','哑铃碰撞'],tips:['30°刺激上胸最佳','手腕保持中立','推起时哑铃微内旋']},
+  {id:'dumbbell-fly',name:'平板哑铃飞鸟',nameEn:'Dumbbell Fly',part:'练胸',muscle:'胸大肌（拉伸重点）',equip:'哑铃 + 平板凳',altEquip:'绳索飞鸟 / 弹力带飞鸟',sets:'3-4',reps:'10-15',gif:'https://muscles.wiki/assets/exercises/dumbbell-fly.gif',steps:['平躺，哑铃在胸上方对握','微屈肘保持固定角度','双臂向外打开至胸肌充分拉伸','胸部发力将哑铃合拢'],mistakes:['手臂伸太直','重量过大','下放过快拉伤肩膀'],tips:['想象环抱大树','手肘角度始终保持不变','下放至感到拉伸即停']},
+  {id:'cable-crossover',name:'绳索夹胸',nameEn:'Cable Crossover',part:'练胸',muscle:'胸大肌（中缝）',equip:'龙门架 + 绳索',altEquip:'弹力带夹胸',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/cable-crossover.gif',steps:['将滑轮调至高位','双手各握一个把手','身体前倾，微屈肘','双手在胸前汇合夹紧'],mistakes:['手臂伸太直','身体借力前倾','动作过快'],tips:['顶峰挤压1-2秒','手肘微屈不变','调节滑轮角度刺激不同区域']},
+  {id:'dips',name:'双杠臂屈伸',nameEn:'Dips',part:'练胸',muscle:'胸大肌下部、肱三头肌',equip:'双杠',altEquip:'凳上臂屈伸 / 弹力带辅助',sets:'3-4',reps:'8-15',gif:'https://muscles.wiki/assets/exercises/dips.gif',steps:['双手撑在双杠上','身体前倾约30°','屈肘下放至肩膀低于肘部','推起至手臂伸直'],mistakes:['身体过于直上直下','肩膀受伤（下放过深）','借力摆荡'],tips:['身体前倾更多刺激胸部','下放深度适中','无法完成可用弹力带辅助']},
+  {id:'push-up',name:'俯卧撑',nameEn:'Push-Up',part:'练胸',muscle:'胸大肌、肱三头肌、核心',equip:'自重（无需器械）',altEquip:'跪姿俯卧撑 / 上斜俯卧撑',sets:'3-4',reps:'力竭',gif:'https://muscles.wiki/assets/exercises/push-up.gif',steps:['双手略宽于肩，身体成一条线','核心收紧，缓慢下放至胸部接近地面','推起回到起始位置'],mistakes:['塌腰','手肘外展过度','半程动作'],tips:['全程身体成板','手肘与身体呈45°','变化手位刺激不同区域']},
+  // 手臂
+  {id:'barbell-curl',name:'杠铃弯举',nameEn:'Barbell Curl',part:'手臂',muscle:'肱二头肌',equip:'杠铃（直杆/EZ杆）',altEquip:'哑铃弯举',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/barbell-curl.gif',steps:['双脚与肩同宽，手臂自然下垂','上臂固定不动','弯举杠铃至肩部高度','顶峰收缩后缓慢下放'],mistakes:['身体摆动借力','手肘前移','下放过快'],tips:['背部靠墙防止借力','顶峰挤压1秒','下放过程3秒']},
+  {id:'hammer-curl',name:'哑铃锤式弯举',nameEn:'Hammer Curl',part:'手臂',muscle:'肱二头肌、肱肌（前臂）',equip:'哑铃',altEquip:'绳索锤式弯举',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/hammer-curl.gif',steps:['持哑铃，掌心相对（锤式握法）','上臂固定，弯举哑铃','顶峰收缩后缓慢还原'],mistakes:['身体摆动','上臂移动','手腕旋转'],tips:['保持锤式握法不变','可双手交替完成','感受前臂外侧发力']},
+  {id:'concentration-curl',name:'集中弯举',nameEn:'Concentration Curl',part:'手臂',muscle:'肱二头肌（孤立训练）',equip:'哑铃 + 平板凳',altEquip:'单臂绳索弯举',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/concentration-curl.gif',steps:['坐姿，上臂后侧靠在大腿内侧','持哑铃的手臂完全伸直','孤立弯举哑铃至肩膀','顶峰收缩后缓慢下放'],mistakes:['借力摆动','上臂离开大腿','动作过快'],tips:['这是纯孤立动作，重量不必大','顶峰旋转手腕增强收缩','慢速控制效果最好']},
+  {id:'tricep-pushdown',name:'绳索下压',nameEn:'Tricep Pushdown',part:'手臂',muscle:'肱三头肌',equip:'龙门架 + 绳索/直杆',altEquip:'弹力带下压',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/tricep-pushdown.gif',steps:['面对龙门架，握住绳索','上臂贴紧身体两侧','下压至手臂完全伸直','控制还原至上臂90°'],mistakes:['上臂移动','身体借力下压','还原过高'],tips:['上臂如钉在身体两侧','顶峰分绳增强收缩','身体微前倾更稳定']},
+  {id:'close-grip-bench',name:'窄距卧推',nameEn:'Close-Grip Bench Press',part:'手臂',muscle:'肱三头肌、胸大肌内侧',equip:'杠铃 + 平板凳',altEquip:'窄距俯卧撑',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/close-grip-bench-press.gif',steps:['握距与肩同宽或略窄','下放杠铃至下胸部','推起至手臂伸直','保持肘部贴近身体'],mistakes:['握距过窄伤手腕','肘部外展','弹胸'],tips:['肘部始终保持贴近身体','重量比宽握卧推轻','专注于三头收缩']},
+  {id:'overhead-tricep-extension',name:'过头哑铃臂屈伸',nameEn:'Overhead Tricep Extension',part:'手臂',muscle:'肱三头肌（长头）',equip:'哑铃',altEquip:'绳索过头臂屈伸 / 弹力带',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/overhead-tricep-extension.gif',steps:['坐姿或站姿，双手持哑铃举过头顶','缓慢屈肘将哑铃降至脑后','肱三头肌发力伸肘回到起始'],mistakes:['上臂移动','重量过大伤肘','弓背'],tips:['上臂保持靠近耳朵','可单手做以纠正不平衡','慢速下放保护肘关节']},
+  // 肩部
+  {id:'seated-dumbbell-press',name:'坐姿哑铃推举',nameEn:'Seated Dumbbell Press',part:'肩部',muscle:'三角肌前束、中束',equip:'哑铃 + 可调凳',altEquip:'杠铃推举 / 器械推举',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/seated-dumbbell-press.gif',steps:['坐在凳上，靠背调至80-90°','哑铃举在肩膀两侧','推举至头顶手臂伸直','缓慢下放回起始位置'],mistakes:['弓背过度','借力推举','下放过低伤肩'],tips:['核心收紧稳定躯干','手肘不要低于肩膀','旋转手腕增加收缩']},
+  {id:'lateral-raise',name:'侧平举',nameEn:'Lateral Raise',part:'肩部',muscle:'三角肌中束',equip:'哑铃',altEquip:'绳索侧平举 / 弹力带侧平举',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/lateral-raise.gif',steps:['双手持哑铃于体侧','微屈肘保持固定角度','肩部发力将哑铃向两侧举起','举至与肩同高后缓慢下放'],mistakes:['重量过大借力','耸肩用斜方肌','手臂伸太直'],tips:['轻重量高次数效果更好','想象倒水壶的动作','顶峰停留1秒']},
+  {id:'rear-delt-fly',name:'俯身飞鸟',nameEn:'Rear Delt Fly',part:'肩部',muscle:'三角肌后束',equip:'哑铃',altEquip:'面拉 / 弹力带俯身飞鸟',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/rear-delt-fly.gif',steps:['俯身至躯干接近平行地面','持哑铃下垂，微屈肘','肩后束发力向两侧打开','顶峰收缩后缓慢还原'],mistakes:['用背部发力','身体起伏借力','手臂伸太直'],tips:['轻盈重量，专注后束发力','想象用肘部画弧线','顶峰停留感受收缩']},
+  {id:'front-raise',name:'前平举',nameEn:'Front Raise',part:'肩部',muscle:'三角肌前束',equip:'哑铃 / 杠铃片',altEquip:'绳索前平举',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/front-raise.gif',steps:['双手持哑铃/杠铃片于大腿前方','手臂微屈，前举至与肩同高','顶峰停留后缓慢下放'],mistakes:['借力摆动','举得过高用斜方肌','动作过快'],tips:['举至下巴高度即可','交替做减少借力','重量宜轻']},
+  {id:'face-pull',name:'面拉',nameEn:'Face Pull',part:'肩部',muscle:'三角肌后束、肩袖肌群',equip:'龙门架 + 绳索',altEquip:'弹力带面拉',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/face-pull.gif',steps:['将滑轮调至上胸高度','双手拉住绳索两端','向后拉向面部，双手在耳朵两侧分开','顶峰收缩1-2秒'],mistakes:['重量过大借力','身体后仰','手腕弯曲'],tips:['这是肩袖健康必做动作','轻重量高质量','想象展示二头肌']},
+  // 核心
+  {id:'plank',name:'平板支撑',nameEn:'Plank',part:'核心',muscle:'腹直肌、腹横肌、核心整体',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'30-60秒',gif:'https://muscles.wiki/assets/exercises/plank.gif',steps:['俯卧，前臂撑地，肘在肩正下方','身体成一条直线','核心收紧，臀部不要塌陷或抬高','保持正常呼吸'],mistakes:['塌腰','臀部过高','憋气','低头/抬头'],tips:['从30秒开始逐步增加','镜子侧看确认身体成直线','可增加单腿/单臂提升难度']},
+  {id:'crunch',name:'卷腹',nameEn:'Crunch',part:'核心',muscle:'腹直肌（上腹部）',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'15-20',gif:'https://muscles.wiki/assets/exercises/crunch.gif',steps:['仰卧，膝盖弯曲，双脚平放','双手放耳侧（不要抱头）','收紧腹部抬起上背部','顶峰收缩后缓慢下放'],mistakes:['双手用力拉头','下背部离开地面','动作过快'],tips:['眼睛看天花板','仅仅是上背部离地','感受腹肌收缩不是脖子']},
+  {id:'hanging-leg-raise',name:'悬挂举腿',nameEn:'Hanging Leg Raise',part:'核心',muscle:'腹直肌、髋屈肌',equip:'单杠 / 悬挂带',altEquip:'仰卧抬腿 / 罗马椅举腿',sets:'3-4',reps:'10-15',gif:'https://muscles.wiki/assets/exercises/hanging-leg-raise.gif',steps:['双手握住单杠，身体自然下垂','核心收紧，抬腿至腿与地面平行或更高','控制下放至起始位置'],mistakes:['身体摆荡','用惯性甩腿','腿不完全放下'],tips:['先练屈膝举腿降低难度','全程核心收紧','慢下放更有效']},
+  {id:'russian-twist',name:'俄罗斯转体',nameEn:'Russian Twist',part:'核心',muscle:'腹斜肌、腹直肌',equip:'瑜伽垫（可持哑铃/药球）',altEquip:'自重转体',sets:'3-4',reps:'20-30',gif:'https://muscles.wiki/assets/exercises/russian-twist.gif',steps:['坐姿，双腿抬起离开地面','身体后仰约45°','双手在胸前合拢','左右旋转躯干'],mistakes:['只转手臂不转躯干','弓背','用惯性'],tips:['双脚始终离地','旋转从腰腹发起','增加难度可手持轻哑铃']},
+  {id:'dead-bug',name:'死虫式',nameEn:'Dead Bug',part:'核心',muscle:'腹横肌、核心稳定性',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/dead-bug.gif',steps:['仰卧，四肢向上举起','对侧手臂和腿同时缓慢下放','保持腰部贴紧地面','回到起始位置换另一侧'],mistakes:['腰部离开地面','动作过快','憋气'],tips:['这是最安全的核心训练','全程腰部贴地','想象肚脐向地面压']},
+  {id:'ab-wheel',name:'滚轮',nameEn:'Ab Wheel Rollout',part:'核心',muscle:'腹直肌、腹横肌、背阔肌',equip:'健腹轮',altEquip:'瑜伽球前推 / 跪姿TRX前推',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/ab-wheel-rollout.gif',steps:['跪姿，双手握住健腹轮','缓慢向前滚出，身体伸展','核心用力将轮子拉回起始位置'],mistakes:['塌腰','用髋屈肌代偿','滚出太远无法收回'],tips:['从短距离开始练习','全程核心收紧','无法完成可由同伴辅助']}
+];
+
+const BODY_PARTS = ['练背','练腿','练胸','手臂','肩部','核心'];
+const PART_EMOJI = { '练背':'🔙', '练腿':'🦵', '练胸':'🏋️', '手臂':'💪', '肩部':'🤸', '核心':'🧘' };
+const ACHIEVEMENTS = [
+  { id:'first-workout', icon:'🥇', name:'初次训练', desc:'完成第一次训练' },
+  { id:'100-workouts', icon:'💯', name:'百炼成钢', desc:'累计完成100次训练' },
+  { id:'streak-2', icon:'🔥', name:'初露锋芒', desc:'连续打卡2天' },
+  { id:'streak-30', icon:'🔥🔥', name:'坚持不懈', desc:'连续打卡30天' },
+  { id:'balanced', icon:'👑', name:'全面发展', desc:'每个部位都训练过' },
+  { id:'pr-breaker', icon:'🏆', name:'突破自我', desc:'任意动作打破个人纪录' },
+  { id:'weekly-3', icon:'🎯', name:'周目标达成', desc:'一周完成3次训练' },
+];
+
+// ============ STATE ============
+let currentPage = 'home';
+let selectedTrainingParts = [];
+let timerSec = 90;
+let timerInterval = null;
+let timerRemaining = 90;
+let currentChart = null;
+let currentPieChart = null;
+
+// ============ HELPERS ============
+function getWeeklyCount() {
+  const logs = getLogs();
+  const now = new Date();
+  const dow = now.getDay();
+  const mon = new Date(now); mon.setDate(now.getDate() - (dow===0?6:dow-1)); mon.setHours(0,0,0,0);
+  const days = new Set();
+  logs.forEach(l => { const d = new Date(l.date); if(d>=mon) days.add(d.toISOString().split('T')[0]); });
+  return days.size;
+}
+function getWeekLogs() {
+  const logs = getLogs();
+  const now = new Date();
+  const dow = now.getDay();
+  const mon = new Date(now); mon.setDate(now.getDate() - (dow===0?6:dow-1)); mon.setHours(0,0,0,0);
+  return logs.filter(l => new Date(l.date) >= mon);
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+function showModal(title, bodyHtml) {
+  document.getElementById('modalContent').innerHTML = `<div class="modal-handle"></div><h3>${title}</h3>${bodyHtml}`;
+  document.getElementById('modalOverlay').classList.add('show');
+}
+function closeModal() { document.getElementById('modalOverlay').classList.remove('show'); }
+document.getElementById('modalOverlay').addEventListener('click', e => { if(e.target===e.currentTarget) closeModal(); });
+
+// ============ NAVIGATION ============
+document.querySelectorAll('.nav-item').forEach(btn => {
+  btn.addEventListener('click', () => switchPage(btn.dataset.page));
+});
+function switchPage(page) {
+  document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+  document.querySelector(`[data-page="${page}"]`).classList.add('active');
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  currentPage = page;
+  if (page === 'home') renderHome();
+  if (page === 'training') renderTrainingPage();
+  if (page === 'library') renderLibrary();
+  if (page === 'stats') renderStats();
+}
+
+// ============ TIMER ============
+function startTimer() {
+  timerRemaining = timerSec;
+  document.getElementById('timerTime').textContent = timerRemaining;
+  document.getElementById('timerOverlay').classList.add('show');
+  clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    timerRemaining--;
+    document.getElementById('timerTime').textContent = timerRemaining;
+    if (timerRemaining <= 0) { clearInterval(timerInterval); document.getElementById('timerOverlay').classList.remove('show'); try{navigator.vibrate(200)}catch{} }
+  }, 1000);
+}
+document.getElementById('btnTimerSkip').addEventListener('click', () => { clearInterval(timerInterval); document.getElementById('timerOverlay').classList.remove('show'); });
+document.querySelectorAll('.timer-btns .chip').forEach(c => {
+  c.addEventListener('click', () => {
+    document.querySelectorAll('.timer-btns .chip').forEach(x => x.classList.remove('active'));
+    c.classList.add('active'); timerSec = parseInt(c.dataset.sec); timerRemaining = timerSec;
+    document.getElementById('timerTime').textContent = timerRemaining;
+  });
+});
+
+// ============ STREAK ============
+function updateStreak() {
+  const today = new Date().toISOString().split('T')[0];
+  const s = getStreak();
+  if (s.lastDate === today) return;
+  const yest = new Date(Date.now()-86400000).toISOString().split('T')[0];
+  if (s.lastDate === yest) s.current++;
+  else if (s.lastDate !== today) s.current = 1;
+  if (s.current > s.longest) s.longest = s.current;
+  s.lastDate = today;
+  saveStreak(s);
+  updateStreakUI();
+}
+function updateStreakUI() {
+  const s = getStreak();
+  document.getElementById('streakCount').textContent = s.current;
+}
+
+// ============ ACHIEVEMENT CHECK ============
+function checkAchievements(prs) {
+  const unlocked = getAchievements();
+  const logs = getLogs();
+  const streak = getStreak();
+  let added = [];
+
+  const tryUnlock = (id) => { if (!unlocked.includes(id)) { unlocked.push(id); added.push(id); } };
+
+  if (logs.length >= 1) tryUnlock('first-workout');
+  if (logs.length >= 100) tryUnlock('100-workouts');
+  if (streak.current >= 2) tryUnlock('streak-2');
+  if (streak.current >= 30) tryUnlock('streak-30');
+
+  const allParts = new Set(); logs.forEach(l => l.bodyParts.forEach(p => allParts.add(p)));
+  if (BODY_PARTS.every(p => allParts.has(p))) tryUnlock('balanced');
+
+  if (prs && prs.length > 0) tryUnlock('pr-breaker');
+  if (getWeeklyCount() >= 3) tryUnlock('weekly-3');
+
+  if (added.length > 0) {
+    saveAchievements(unlocked);
+    added.forEach(id => {
+      const a = ACHIEVEMENTS.find(x => x.id === id);
+      if (a) showToast(`🏆 ${a.icon} ${a.name}`);
+    });
+  }
+}
+
+// ============ CONFETTI ============
+function triggerConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  canvas.style.display = 'block';
+  const particles = [];
+  const colors = ['#00C853','#000000','#FF9800','#FFEB3B','#FFF','#2196F3'];
+  for (let i=0;i<120;i++) {
+    particles.push({
+      x: Math.random()*canvas.width, y: -20-Math.random()*canvas.height,
+      w: 6+Math.random()*8, h: 4+Math.random()*6,
+      color: colors[Math.floor(Math.random()*colors.length)],
+      vx: (Math.random()-0.5)*3, vy: 3+Math.random()*6,
+      rot: Math.random()*360, rotV: (Math.random()-0.5)*10, opacity:1
+    });
+  }
+  let start = performance.now();
+  function animate(now) {
+    const elapsed = now - start;
+    if (elapsed > 2500) { canvas.style.display = 'none'; return; }
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    const fadeAt = 1800;
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.rot += p.rotV;
+      p.vx *= 0.99; p.vy += 0.05;
+      if (elapsed > fadeAt) p.opacity = Math.max(0, 1-(elapsed-fadeAt)/700);
+      ctx.save(); ctx.globalAlpha = p.opacity; ctx.translate(p.x,p.y);
+      ctx.rotate(p.rot*Math.PI/180); ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.restore();
+    });
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+}
+
+// ============ PR DETECTION ============
+function detectPRs(exercises) {
+  const logs = getLogs();
+  const prs = [];
+  exercises.forEach(ex => {
+    let bestW = 0;
+    logs.forEach(l => {
+      const le = l.exercises.find(e => e.name === ex.name);
+      if (le) le.sets.forEach(s => { if (s.weight > bestW) bestW = s.weight; });
+    });
+    ex.sets.forEach(s => { if (s.weight > bestW && bestW > 0) prs.push({name:ex.name,weight:s.weight,old:bestW}); });
+  });
+  return prs;
+}
+
+// ============ PAGE 1: HOME ============
+function renderHome() {
+  updateStreakUI();
+  const today = new Date();
+  const hour = today.getHours();
+  const greet = hour < 12 ? '早上好' : hour < 18 ? '下午好' : '晚上好';
+  document.getElementById('greetingText').textContent = greet + '，今天练什么？';
+  const s = getStreak();
+  document.getElementById('greetingSub').textContent = s.current > 0 ? `🔥 连续训练 ${s.current} 天，继续加油！` : '准备好了就开始吧 💪';
+
+  // Body part grid
+  document.getElementById('homePartGrid').innerHTML = BODY_PARTS.map(p => `
+    <div class="part-card" data-part="${p}" onclick="quickStart('${p}')">
+      <span class="part-emoji">${PART_EMOJI[p]}</span>
+      <span class="part-name">${p}</span>
+      <span class="part-count">${EXERCISES.filter(e=>e.part===p).length} 个动作</span>
+    </div>
+  `).join('');
+
+  // Weekly challenge
+  const wc = getWeeklyCount();
+  document.getElementById('homeWeeklyCount').textContent = wc;
+  document.getElementById('homeWeeklyBar').style.width = Math.min(100, Math.round(wc/3*100)) + '%';
+  document.getElementById('homeWeeklyBadge').textContent = wc >= 3 ? '✅' : '🎯';
+
+  // Weekly overview
+  const wl = getWeekLogs();
+  const days = new Set(wl.map(l => l.date.split('T')[0]));
+  let totalSets = 0; wl.forEach(l => l.exercises.forEach(e => totalSets += e.sets.length));
+  document.getElementById('homeDays').textContent = days.size;
+  document.getElementById('homeSets').textContent = totalSets;
+
+  // Recent achievements
+  const unlocked = getAchievements();
+  if (unlocked.length > 0) {
+    const recent = ACHIEVEMENTS.filter(a => unlocked.includes(a.id)).slice(-3);
+    document.getElementById('homeAchievements').innerHTML = recent.map(a => `
+      <div class="achieve-item unlocked" style="display:inline-block;margin:0 8px 0 0;padding:10px 14px">
+        <span class="achieve-icon" style="font-size:1.3rem">${a.icon}</span>
+        <span class="achieve-name">${a.name}</span>
+      </div>
+    `).join('');
+  } else {
+    document.getElementById('homeAchievements').innerHTML = '<p style="color:var(--text3);font-size:0.85rem">完成首次训练解锁成就 🏆</p>';
+  }
+}
+
+function quickStart(part) {
+  selectedTrainingParts = [part];
+  switchPage('training');
+}
+
+// ============ PAGE 2: TRAINING ============
+function renderTrainingPage() {
+  const container = document.getElementById('trainingContent');
+  if (selectedTrainingParts.length === 0) {
+    container.innerHTML = `
+      <div style="padding-top:12px">
+        <div class="greeting">开始训练</div>
+        <div class="greeting-sub mb16">先选择今天要练的部位</div>
+        <div class="section-title" style="margin-top:0">选择训练部位</div>
+        <div class="part-grid">
+          ${BODY_PARTS.map(p => `
+            <div class="part-card" data-part="${p}" onclick="selectTrainingPart('${p}')">
+              <span class="part-emoji">${PART_EMOJI[p]}</span>
+              <span class="part-name">${p}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>`;
+    return;
+  }
+
+  const exercises = EXERCISES.filter(e => selectedTrainingParts.includes(e.part));
+  const logs = getLogs();
+  const lastLog = logs.length > 0 ? logs[logs.length-1] : null;
+
+  let html = `
+    <div style="padding-top:12px">
+      <div class="flex-between mb16">
+        <div>
+          <span style="font-weight:700;font-size:1.1rem">${selectedTrainingParts.map(p=>PART_EMOJI[p]+' '+p).join(' · ')}</span>
+        </div>
+        <div class="flex-between gap8">
+          <button class="btn btn-secondary btn-sm" onclick="selectTrainingPart('')">切换</button>
+          <button class="btn btn-secondary btn-sm" id="btnLastTraining">📋 上次</button>
+        </div>
+      </div>
+  `;
+
+  exercises.forEach(e => {
+    let lastData = null;
+    if (lastLog) { const le = lastLog.exercises.find(x => x.name === e.name); if (le) lastData = le; }
+    html += `
+    <div class="card" data-exercise="${e.id}">
+      <div class="flex-between mb8">
+        <div>
+          <span style="font-weight:700;font-size:0.95rem">${e.name}</span>
+          <span style="font-size:0.72rem;color:var(--text3);margin-left:4px">${e.nameEn}</span>
+        </div>
+        <span style="font-size:0.73rem;color:var(--text2)">${e.sets}组×${e.reps}次</span>
+      </div>
+      ${lastData ? `<div style="font-size:0.72rem;color:var(--text3);margin-bottom:8px;padding:6px 10px;background:var(--bg2);border-radius:6px">上次：${lastData.sets.map(s=>`${s.weight||'-'}kg×${s.reps||'-'}`).join(' | ')}</div>` : ''}
+      <div class="set-rows" id="sets-${e.id}"></div>
+      <button class="btn btn-secondary btn-sm mt8" onclick="addTrainingSet('${e.id}')">+ 添加组</button>
+    </div>`;
+  });
+
+  html += `
+    <div class="mt16"><label>📝 训练备注</label><textarea id="trainingNotes" placeholder="今天的训练感受..."></textarea></div>
+    <button class="btn btn-primary mt16" id="btnSaveTraining">✅ 完成训练</button>
+    <div class="section-title">📜 历史记录</div>
+    <div id="trainingHistory"></div>
+  </div>`;
+
+  container.innerHTML = html;
+
+  // Init sets
+  exercises.forEach(e => {
+    const el = document.getElementById('sets-'+e.id);
+    if (el && el.children.length === 0) { addTrainingSet(e.id); addTrainingSet(e.id); addTrainingSet(e.id); }
+  });
+
+  // Bind buttons
+  document.getElementById('btnSaveTraining').addEventListener('click', saveTraining);
+  document.getElementById('btnLastTraining').addEventListener('click', showLastTraining);
+  renderTrainingHistory();
+}
+
+function selectTrainingPart(part) {
+  if (part === '') { selectedTrainingParts = []; }
+  else if (selectedTrainingParts.includes(part)) { selectedTrainingParts = selectedTrainingParts.filter(p=>p!==part); }
+  else { selectedTrainingParts.push(part); }
+  renderTrainingPage();
+}
+
+function addTrainingSet(exId) {
+  const container = document.getElementById('sets-'+exId);
+  if (!container) return;
+  const idx = container.children.length + 1;
+  const row = document.createElement('div');
+  row.className = 'set-row';
+  row.innerHTML = `
+    <span class="set-num">${idx}</span>
+    <input type="number" placeholder="次数" class="set-reps" value="${idx<=3?'10':''}" min="0" inputmode="numeric">
+    <input type="number" placeholder="重量kg" class="set-weight" value="" min="0" step="0.5" inputmode="decimal">
+    <div class="set-done" onclick="this.classList.toggle('done');startTimer()" title="完成"></div>
+  `;
+  container.appendChild(row);
+}
+
+function collectTrainingSets() {
+  const exercises = [];
+  document.querySelectorAll('[data-exercise]').forEach(card => {
+    const exId = card.dataset.exercise;
+    const ex = EXERCISES.find(e => e.id === exId);
+    const sets = [];
+    card.querySelectorAll('.set-row').forEach(row => {
+      const reps = parseInt(row.querySelector('.set-reps').value) || 0;
+      const weight = parseFloat(row.querySelector('.set-weight').value) || 0;
+      if (reps > 0) sets.push({ reps, weight });
+    });
+    if (sets.length > 0) exercises.push({ name: ex.name, part: ex.part, sets });
+  });
+  return exercises;
+}
+
+function saveTraining() {
+  const exercises = collectTrainingSets();
+  if (!exercises.length) { showToast('请至少完成一组训练'); return; }
+
+  const prs = detectPRs(exercises);
+  const logs = getLogs();
+  logs.push({
+    date: new Date().toISOString(),
+    bodyParts: [...selectedTrainingParts],
+    exercises,
+    notes: document.getElementById('trainingNotes')?.value || '',
+  });
+  saveLogs(logs);
+  updateStreak();
+  checkAchievements(prs);
+
+  if (prs.length > 0) { showToast(`🎉 新PR！${prs.map(p=>p.name).join('、')}`); triggerConfetti(); try{navigator.vibrate([200,100,200])}catch{} }
+  else showToast('✅ 训练完成！');
+
+  document.getElementById('trainingNotes').value = '';
+  renderTrainingPage();
+}
+
+function showLastTraining() {
+  const logs = getLogs();
+  if (!logs.length) { showToast('暂无训练记录'); return; }
+  const last = logs[logs.length-1];
+  let html = `<p style="color:var(--text2);font-size:0.83rem;margin-bottom:10px">📅 ${new Date(last.date).toLocaleDateString('zh-CN')} | ${last.bodyParts.join('、')}</p>`;
+  last.exercises.forEach(e => {
+    html += `<div style="margin-bottom:6px"><strong>${e.name}</strong><br>${e.sets.map((s,i)=>`${i+1}. ${s.weight||0}kg×${s.reps||0}`).join(' | ')}</div>`;
+  });
+  if (last.notes) html += `<p style="margin-top:8px;font-style:italic;color:var(--text2)">📝 ${last.notes}</p>`;
+  html += `<button class="btn btn-primary btn-sm mt12" onclick="copyLastTraining();closeModal()">📋 一键复制</button>`;
+  showModal('上次训练', html);
+}
+
+function copyLastTraining() {
+  const logs = getLogs();
+  if (!logs.length) return;
+  const last = logs[logs.length-1];
+  selectedTrainingParts = [...last.bodyParts];
+  renderTrainingPage();
+  setTimeout(() => {
+    last.exercises.forEach(e => {
+      const ex = EXERCISES.find(x => x.name === e.name);
+      if (!ex) return;
+      const container = document.getElementById('sets-'+ex.id);
+      if (!container) return;
+      container.innerHTML = '';
+      e.sets.forEach(s => { addTrainingSet(ex.id); const rows = container.querySelectorAll('.set-row'); const row = rows[rows.length-1]; if(row){ row.querySelector('.set-reps').value = s.reps||''; row.querySelector('.set-weight').value = s.weight||''; } });
+    });
+  }, 100);
+}
+
+function renderTrainingHistory() {
+  const el = document.getElementById('trainingHistory');
+  if (!el) return;
+  const logs = getLogs().slice().reverse();
+  if (!logs.length) { el.innerHTML = '<div class="empty-state"><div class="empty-icon">📭</div>暂无训练记录</div>'; return; }
+  el.innerHTML = logs.slice(0,20).map(log => `
+    <div class="card history-item" style="padding:12px 16px">
+      <div class="history-header" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.arrow').textContent=this.nextElementSibling.classList.contains('open')?'▾':'▸'">
+        <div><div class="history-date">📅 ${new Date(log.date).toLocaleDateString('zh-CN')}</div>
+        <div class="history-body">${log.bodyParts.join('、')} · ${log.exercises.length}个动作 · ${log.exercises.reduce((s,e)=>s+e.sets.length,0)}组</div></div>
+        <span class="arrow" style="color:var(--text3)">▸</span>
+      </div>
+      <div class="history-detail">
+        ${log.exercises.map(e=>`<div style="margin-bottom:3px"><strong>${e.name}</strong>: ${e.sets.map((s,i)=>`${i+1}.${s.weight||0}kg×${s.reps||0}`).join(' | ')}</div>`).join('')}
+        ${log.notes?`<p style="margin-top:6px;font-style:italic;color:var(--text3)">📝 ${log.notes}</p>`:''}
+      </div>
+    </div>
+  `).join('');
+}
+
+// ============ PAGE 3: EXERCISE LIBRARY ============
+let libraryFilter = '全部';
+
+function renderLibrary() {
+  // Chips
+  const chipContainer = document.getElementById('libraryChips');
+  chipContainer.innerHTML = '<button class="chip active" data-part="全部">全部</button>' + BODY_PARTS.map(p => `<button class="chip" data-part="${p}">${PART_EMOJI[p]} ${p}</button>`).join('');
+  chipContainer.querySelectorAll('.chip').forEach(c => {
+    c.addEventListener('click', () => {
+      chipContainer.querySelectorAll('.chip').forEach(x => x.classList.remove('active'));
+      c.classList.add('active'); libraryFilter = c.dataset.part;
+      document.getElementById('searchInput').value = '';
+      renderExerciseList();
+    });
+  });
+  renderExerciseList();
+  document.getElementById('searchInput').addEventListener('input', renderExerciseList);
+}
+
+function renderExerciseList() {
+  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+  let filtered = EXERCISES;
+  if (libraryFilter !== '全部') filtered = filtered.filter(e => e.part === libraryFilter);
+  if (search) filtered = filtered.filter(e => e.name.includes(search) || e.nameEn.toLowerCase().includes(search) || e.muscle.includes(search));
+
+  const container = document.getElementById('exerciseListView');
+  if (!filtered.length) { container.innerHTML = '<div class="empty-state"><div class="empty-icon">🔍</div>未找到匹配动作</div>'; return; }
+
+  container.innerHTML = filtered.map(e => `
+    <div class="exercise-item" onclick="showExerciseDetail('${e.id}')">
+      <div class="exercise-thumb">${PART_EMOJI[e.part]}</div>
+      <div class="exercise-info">
+        <div class="exercise-name">${e.name}</div>
+        <div class="exercise-name-en">${e.nameEn}</div>
+        <div class="exercise-meta"><span class="tag">${e.part}</span><span class="tag">${e.sets}组×${e.reps}次</span></div>
+      </div>
+      <span style="color:var(--text3)">▸</span>
+    </div>
+  `).join('');
+}
+
+function drawExercisePlaceholder(canvas, part) {
+  const ctx = canvas.getContext('2d');
+  const w = canvas.width;
+  const h = canvas.height;
+  const cx = w / 2;
+
+  // Background
+  ctx.fillStyle = '#14141e';
+  ctx.fillRect(0, 0, w, h);
+
+  // Subtle grid
+  ctx.strokeStyle = 'rgba(255,255,255,0.025)';
+  ctx.lineWidth = 0.5;
+  const gridSize = 25;
+  for (let x = gridSize; x < w; x += gridSize) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
+  for (let y = gridSize; y < h; y += gridSize) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
+
+  // Radial glow behind body
+  const glow = ctx.createRadialGradient(cx, 90, 10, cx, 90, 140);
+  glow.addColorStop(0, 'rgba(255,255,255,0.06)');
+  glow.addColorStop(1, 'rgba(255,255,255,0)');
+  ctx.fillStyle = glow;
+  ctx.fillRect(0, 0, w, h);
+
+  // Muscle highlight colors
+  const colors = {
+    '练背': { fill: 'rgba(91,141,239,0.25)', stroke: 'rgba(91,141,239,0.7)' },
+    '练腿': { fill: 'rgba(168,85,247,0.25)', stroke: 'rgba(168,85,247,0.7)' },
+    '练胸': { fill: 'rgba(248,113,113,0.25)', stroke: 'rgba(248,113,113,0.7)' },
+    '手臂': { fill: 'rgba(251,191,36,0.25)',  stroke: 'rgba(251,191,36,0.7)' },
+    '肩部': { fill: 'rgba(52,211,153,0.25)', stroke: 'rgba(52,211,153,0.7)' },
+    '核心': { fill: 'rgba(251,146,60,0.25)', stroke: 'rgba(251,146,60,0.7)' },
+  };
+  const c = colors[part] || colors['练胸'];
+
+  // Draw body outline (thin white)
+  ctx.strokeStyle = 'rgba(255,255,255,0.5)';
+  ctx.lineWidth = 1.3;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+
+  // Head
+  ctx.beginPath();
+  ctx.arc(cx, 26, 12, Math.PI, 0);
+  ctx.stroke();
+
+  // Neck + trapezius
+  ctx.beginPath();
+  ctx.moveTo(cx - 3, 38); ctx.lineTo(cx - 32, 48);
+  ctx.moveTo(cx + 3, 38); ctx.lineTo(cx + 32, 48);
+  ctx.stroke();
+
+  // Torso
+  ctx.beginPath();
+  ctx.moveTo(cx - 32, 48);
+  ctx.quadraticCurveTo(cx - 36, 70, cx - 28, 95);
+  ctx.quadraticCurveTo(cx - 22, 115, cx - 20, 128);
+  ctx.moveTo(cx + 32, 48);
+  ctx.quadraticCurveTo(cx + 36, 70, cx + 28, 95);
+  ctx.quadraticCurveTo(cx + 22, 115, cx + 20, 128);
+  ctx.stroke();
+
+  // Waist
+  ctx.beginPath();
+  ctx.moveTo(cx - 20, 128); ctx.lineTo(cx + 20, 128);
+  ctx.stroke();
+
+  // Left arm
+  ctx.beginPath();
+  ctx.moveTo(cx - 32, 48);
+  ctx.quadraticCurveTo(cx - 56, 68, cx - 58, 94);
+  ctx.quadraticCurveTo(cx - 56, 110, cx - 48, 130);
+  ctx.stroke();
+
+  // Right arm
+  ctx.beginPath();
+  ctx.moveTo(cx + 32, 48);
+  ctx.quadraticCurveTo(cx + 56, 68, cx + 58, 94);
+  ctx.quadraticCurveTo(cx + 56, 110, cx + 48, 130);
+  ctx.stroke();
+
+  // Left leg
+  ctx.beginPath();
+  ctx.moveTo(cx - 12, 128);
+  ctx.quadraticCurveTo(cx - 18, 155, cx - 20, 185);
+  ctx.stroke();
+
+  // Right leg
+  ctx.beginPath();
+  ctx.moveTo(cx + 12, 128);
+  ctx.quadraticCurveTo(cx + 18, 155, cx + 20, 185);
+  ctx.stroke();
+
+  // --- Highlight target muscle zone ---
+  ctx.strokeStyle = c.stroke;
+  ctx.lineWidth = 2;
+  ctx.fillStyle = c.fill;
+
+  if (part === '练背') {
+    // Upper/mid back
+    ctx.beginPath();
+    ctx.moveTo(cx - 24, 52);
+    ctx.quadraticCurveTo(cx - 30, 80, cx - 22, 110);
+    ctx.lineTo(cx + 22, 110);
+    ctx.quadraticCurveTo(cx + 30, 80, cx + 24, 52);
+    ctx.closePath(); ctx.fill(); ctx.stroke();
+    // Lats
+    ctx.beginPath();
+    ctx.moveTo(cx - 28, 70); ctx.quadraticCurveTo(cx - 34, 100, cx - 24, 120);
+    ctx.lineTo(cx - 18, 120); ctx.quadraticCurveTo(cx - 22, 100, cx - 20, 70); ctx.closePath();
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(cx + 28, 70); ctx.quadraticCurveTo(cx + 34, 100, cx + 24, 120);
+    ctx.lineTo(cx + 18, 120); ctx.quadraticCurveTo(cx + 22, 100, cx + 20, 70); ctx.closePath();
+    ctx.fill(); ctx.stroke();
+  } else if (part === '练胸') {
+    // Chest
+    ctx.beginPath();
+    ctx.ellipse(cx - 13, 70, 17, 22, -0.2, 0, Math.PI * 2);
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.ellipse(cx + 13, 70, 17, 22, 0.2, 0, Math.PI * 2);
+    ctx.fill(); ctx.stroke();
+  } else if (part === '练腿') {
+    // Quads
+    ctx.beginPath();
+    ctx.moveTo(cx - 14, 132); ctx.quadraticCurveTo(cx - 20, 158, cx - 18, 175);
+    ctx.lineTo(cx - 6, 175); ctx.quadraticCurveTo(cx - 8, 158, cx - 2, 132); ctx.closePath();
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(cx + 14, 132); ctx.quadraticCurveTo(cx + 20, 158, cx + 18, 175);
+    ctx.lineTo(cx + 6, 175); ctx.quadraticCurveTo(cx + 8, 158, cx + 2, 132); ctx.closePath();
+    ctx.fill(); ctx.stroke();
+  } else if (part === '手臂') {
+    // Biceps + forearms
+    ctx.beginPath();
+    ctx.ellipse(cx - 56, 78, 12, 18, -0.3, 0, Math.PI * 2);
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.ellipse(cx + 56, 78, 12, 18, 0.3, 0, Math.PI * 2);
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.ellipse(cx - 52, 112, 9, 16, 0.2, 0, Math.PI * 2);
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.ellipse(cx + 52, 112, 9, 16, -0.2, 0, Math.PI * 2);
+    ctx.fill(); ctx.stroke();
+  } else if (part === '肩部') {
+    // Deltoids
+    ctx.beginPath();
+    ctx.arc(cx - 32, 50, 16, 0.8, 2.2);
+    ctx.fill(); ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(cx + 32, 50, 16, 0.9, 2.3);
+    ctx.fill(); ctx.stroke();
+  } else if (part === '核心') {
+    // Abs
+    ctx.beginPath();
+    ctx.roundRect(cx - 14, 62, 28, 62, 10);
+    ctx.fill(); ctx.stroke();
+    // Ab lines
+    ctx.strokeStyle = c.stroke;
+    ctx.lineWidth = 0.8;
+    ctx.setLineDash([4, 6]);
+    for (let ly = 78; ly < 118; ly += 12) {
+      ctx.beginPath(); ctx.moveTo(cx - 10, ly); ctx.lineTo(cx + 10, ly); ctx.stroke();
+    }
+    ctx.setLineDash([]);
+    ctx.beginPath(); ctx.moveTo(cx, 64); ctx.lineTo(cx, 122); ctx.stroke();
+  }
+}
+
+// Update the showExerciseDetail function
+function showExerciseDetail(id) {
+  const e = EXERCISES.find(x => x.id === id);
+  if (!e) return;
+  const html = `
+    <div style="margin:-24px -20px 0">
+      <div style="position:relative;width:100%;height:200px;overflow:hidden;background:#14141e">
+        <canvas id="ph-${e.id}" width="800" height="200" style="width:100%;height:200px;display:block"></canvas>
+        <img src="${e.gif}" alt="${e.name}" style="position:absolute;inset:0;width:100%;height:200px;object-fit:contain;background:#14141e;display:none" loading="lazy" onload="var c=document.getElementById('ph-${e.id}');if(c)c.style.display='none';this.style.display='block'" onerror="this.remove()">
+      </div>
+      <div style="padding:20px">
+        <div class="detail-title">${e.name}</div>
+        <div class="detail-subtitle">${e.nameEn}</div>
+        <div class="detail-section"><h4>🎯 目标肌肉</h4><p>${e.muscle}</p></div>
+        <div class="detail-section"><h4>🔧 器械</h4><p>${e.equip}<br><span style="color:var(--text3);font-size:0.8rem">替代：${e.altEquip}</span></p></div>
+        <div class="detail-section"><h4>📊 推荐</h4><p>${e.sets} 组 × ${e.reps} 次</p></div>
+        <div class="detail-section"><h4>📝 步骤</h4><ol>${e.steps.map(s=>`<li>${s}</li>`).join('')}</ol></div>
+        <div class="detail-section"><h4>⚠️ 常见错误</h4><ul>${e.mistakes.map(m=>`<li>${m}</li>`).join('')}</ul></div>
+        <div class="detail-section"><h4>💡 小贴士</h4><ul>${e.tips.map(t=>`<li>${t}</li>`).join('')}</ul></div>
+        <button class="btn btn-primary mt16" onclick="quickStartExercise('${e.part}');closeModal()">开始训练 ${e.part}</button>
+      </div>
+    </div>
+  `;
+  showModal('', html);
+  setTimeout(() => {
+    const canvas = document.getElementById('ph-' + e.id);
+    if (canvas) drawExercisePlaceholder(canvas, e.part);
+  }, 80);
+}
+
+function quickStartExercise(part) {
+  selectedTrainingParts = [part];
+  switchPage('training');
+}
+
+// ============ PAGE 4: STATS ============
+function renderStats() {
+  renderProgressSelect();
+  renderProgressChart();
+  renderHeatmap();
+  renderPie();
+  renderAchievements();
+}
+
+function renderProgressSelect() {
+  const logs = getLogs();
+  const names = new Set();
+  logs.forEach(l => l.exercises.forEach(e => names.add(e.name)));
+  const select = document.getElementById('progressExercise');
+  select.innerHTML = '<option value="">选择动作...</option>' + [...names].map(n => `<option value="${n}">${n}</option>`).join('');
+  select.onchange = renderProgressChart;
+}
+
+function renderProgressChart() {
+  const name = document.getElementById('progressExercise').value;
+  const ctx = document.getElementById('progressChart').getContext('2d');
+  if (currentChart) currentChart.destroy();
+
+  if (!name) {
+    currentChart = new Chart(ctx, { type:'line', data:{labels:[],datasets:[]}, options:{responsive:true,maintainAspectRatio:false} });
+    return;
+  }
+  const logs = getLogs();
+  const data = [];
+  logs.forEach(log => {
+    const ex = log.exercises.find(e => e.name === name);
+    if (ex) {
+      const maxW = Math.max(...ex.sets.map(s => s.weight || 0));
+      if (maxW > 0) data.push({ date: new Date(log.date).toLocaleDateString('zh-CN'), weight: maxW });
+    }
+  });
+  currentChart = new Chart(ctx, {
+    type:'line',
+    data:{
+      labels: data.map(d=>d.date),
+      datasets:[{ label:'最大重量(kg)', data:data.map(d=>d.weight), borderColor:'#000', backgroundColor:'rgba(0,0,0,0.04)', fill:true, tension:0.3, pointRadius:5, pointBackgroundColor:'#000', borderWidth:2 }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{ labels:{ color:'#666' } } },
+      scales:{ x:{ ticks:{ color:'#999', maxTicksLimit:10 } }, y:{ ticks:{ color:'#999' }, title:{ display:true, text:'重量(kg)', color:'#999' } } }
+    }
+  });
+}
+
+function renderHeatmap() {
+  const grid = document.getElementById('heatmapGrid');
+  const logs = getLogs();
+  const dateMap = {};
+  logs.forEach(l => { const d = l.date.split('T')[0]; dateMap[d] = (dateMap[d]||0) + l.exercises.length; });
+  let cells = '';
+  const now = new Date();
+  for (let i=89; i>=0; i--) {
+    const d = new Date(now); d.setDate(d.getDate()-i);
+    const key = d.toISOString().split('T')[0];
+    const count = dateMap[key] || 0;
+    let lvl = ''; if(count>0)lvl='l1'; if(count>=5)lvl='l2'; if(count>=10)lvl='l3'; if(count>=15)lvl='l4';
+    cells += `<div class="heatmap-cell ${lvl}" title="${key}: ${count}组"></div>`;
+  }
+  grid.innerHTML = cells;
+}
+
+function renderPie() {
+  const ctx = document.getElementById('pieChart').getContext('2d');
+  if (currentPieChart) currentPieChart.destroy();
+  const logs = getLogs();
+  const counts = {}; BODY_PARTS.forEach(p => counts[p]=0);
+  logs.forEach(l => l.bodyParts.forEach(p => { counts[p] = (counts[p]||0)+1; }));
+  const labels = BODY_PARTS.filter(p => counts[p]>0);
+  const data = labels.map(p => counts[p]);
+  const colors = ['#000','#444','#888','#BBB','#DDD','#EEE'];
+  currentPieChart = new Chart(ctx, {
+    type:'doughnut',
+    data:{ labels, datasets:[{ data, backgroundColor:colors.slice(0,data.length), borderColor:'#fff', borderWidth:2 }] },
+    options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'right', labels:{ color:'#666', padding:14, font:{size:11} } } } }
+  });
+}
+
+function renderAchievements() {
+  const unlocked = getAchievements();
+  document.getElementById('achieveGrid').innerHTML = ACHIEVEMENTS.map(a => `
+    <div class="achieve-item ${unlocked.includes(a.id)?'unlocked':''}">
+      <div class="achieve-icon">${a.icon}</div>
+      <div class="achieve-name">${a.name}</div>
+      <div style="font-size:0.62rem;color:var(--text3);margin-top:2px">${a.desc}</div>
+    </div>
+  `).join('');
+}
+
+
+// ============ AI PLANNER ============
+const COMPOUND = new Set([
+  'pull-up','lat-pulldown','seated-row','single-arm-dumbbell-row','deadlift','barbell-row',
+  'squat','leg-press','romanian-deadlift','bulgarian-split-squat',
+  'bench-press','incline-dumbbell-press','cable-crossover','dips','push-up',
+  'close-grip-bench','seated-dumbbell-press',
+  'hanging-leg-raise','ab-wheel'
+]);
+
+let aiPlan = null;
+
+function showAIPlanner() {
+  const html = `
+    <div style="margin-top:-8px">
+      <div class="greeting" style="font-size:1.35rem;margin-bottom:16px">🤖 AI 训练计划</div>
+      <label>今天想练什么部位？</label>
+      <div class="chip-row" id="aiParts" style="margin-bottom:16px">
+        ${BODY_PARTS.map(p => `<button class="chip" data-part="${p}">${PART_EMOJI[p]} ${p}</button>`).join('')}
+      </div>
+      <label>训练时长</label>
+      <div class="chip-row" id="aiTime" style="margin-bottom:16px">
+        <button class="chip active" data-time="45">30分钟</button>
+        <button class="chip" data-time="45">45分钟</button>
+        <button class="chip" data-time="60">60分钟</button>
+        <button class="chip" data-time="90">90分钟</button>
+      </div>
+      <label>今日状态</label>
+      <div class="chip-row" id="aiEnergy" style="margin-bottom:16px">
+        <button class="chip" data-energy="tired">😴 疲惫</button>
+        <button class="chip active" data-energy="normal">🙂 正常</button>
+        <button class="chip" data-energy="good">⚡ 状态好</button>
+      </div>
+      <button class="btn btn-primary" onclick="generateAIPlan()">✨ 生成训练计划</button>
+      <div id="aiPlanResult" style="margin-top:16px"></div>
+    </div>
+  `;
+  aiPlan = null;
+  showModal('', html);
+
+  // Init chip toggles
+  setTimeout(() => {
+    document.querySelectorAll('#aiParts .chip').forEach(c => {
+      c.addEventListener('click', () => c.classList.toggle('active'));
+    });
+    document.querySelectorAll('#aiTime .chip').forEach(c => {
+      c.addEventListener('click', () => {
+        document.querySelectorAll('#aiTime .chip').forEach(x => x.classList.remove('active'));
+        c.classList.add('active');
+      });
+    });
+    document.querySelectorAll('#aiEnergy .chip').forEach(c => {
+      c.addEventListener('click', () => {
+        document.querySelectorAll('#aiEnergy .chip').forEach(x => x.classList.remove('active'));
+        c.classList.add('active');
+      });
+    });
+  }, 50);
+}
+
+function generateAIPlan() {
+  const parts = [...document.querySelectorAll('#aiParts .chip.active')].map(c => c.dataset.part);
+  if (!parts.length) { showToast('请至少选择一个部位'); return; }
+
+  const timeChip = document.querySelector('#aiTime .chip.active');
+  const timeMin = parseInt(timeChip?.dataset?.time || '45');
+
+  const energyChip = document.querySelector('#aiEnergy .chip.active');
+  const energy = energyChip?.dataset?.energy || 'normal';
+
+  // Filter exercises by selected body parts
+  let pool = EXERCISES.filter(e => parts.includes(e.part));
+
+  // De-duplicate by name (in case same exercise appears)
+  const seen = new Set();
+  pool = pool.filter(e => { if (seen.has(e.id)) return false; seen.add(e.id); return true; });
+
+  // Sort: compound first, then isolation
+  pool.sort((a, b) => {
+    const aCompound = COMPOUND.has(a.id) ? 0 : 1;
+    const bCompound = COMPOUND.has(b.id) ? 0 : 1;
+    return aCompound - bCompound;
+  });
+
+  // Determine how many exercises based on time
+  let count = 4;
+  if (timeMin >= 90) count = 6;
+  else if (timeMin >= 60) count = 5;
+  else if (timeMin >= 45) count = 5;
+
+  // Pick exercises (try to spread across parts if multiple parts selected)
+  const selected = [];
+  const partQuota = {};
+  parts.forEach(p => partQuota[p] = 0);
+
+  // First pass: pick one compound from each part
+  for (const p of parts) {
+    const ex = pool.find(e => e.part === p && COMPOUND.has(e.id) && !selected.includes(e));
+    if (ex && selected.length < count) { selected.push(ex); partQuota[p]++; }
+  }
+
+  // Second pass: fill remaining slots
+  for (const e of pool) {
+    if (selected.length >= count) break;
+    if (!selected.includes(e)) selected.push(e);
+  }
+
+  // Limit to count
+  const plan = selected.slice(0, count);
+
+  // Determine sets/reps based on time and energy
+  let defaultSets = 3;
+  if (timeMin >= 90) defaultSets = 4;
+  else if (timeMin >= 60) defaultSets = 4;
+
+  const repMap = { tired: [8,10], normal: [10,12], good: [12,15] };
+  const [repLow, repHigh] = repMap[energy];
+
+  // Generate sets/reps for each exercise
+  aiPlan = plan.map((e, i) => {
+    const isCompound = COMPOUND.has(e.id);
+    const sets = isCompound ? defaultSets : Math.max(3, defaultSets - 1);
+    const reps = isCompound ? `${repLow}-${repHigh}` : `${repHigh-2}-${repHigh}`;
+    return { ...e, planSets: sets, planReps: reps };
+  });
+
+  // Estimate total time: each set ~45s work + 90s rest between sets
+  let totalSeconds = 0;
+  aiPlan.forEach(e => {
+    totalSeconds += e.planSets * 45; // work time
+    totalSeconds += (e.planSets - 1) * 90; // rest between sets
+  });
+  totalSeconds += (aiPlan.length - 1) * 120; // transition between exercises
+  const estMin = Math.round(totalSeconds / 60);
+
+  // Render result
+  const resultEl = document.getElementById('aiPlanResult');
+  resultEl.innerHTML = `
+    <div style="border-top:1px solid var(--border);padding-top:16px">
+      <div style="font-weight:700;font-size:1rem;margin-bottom:4px">📋 今日训练计划</div>
+      <div style="font-size:0.78rem;color:var(--text3);margin-bottom:12px">
+        ${parts.map(p=>PART_EMOJI[p]+p).join(' · ')} · ${timeMin}分钟 · 预计${estMin}分钟完成
+      </div>
+      ${aiPlan.map((e, i) => `
+        <div class="card" style="padding:12px 14px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start">
+          <div style="font-size:1.2rem;font-weight:700;color:var(--text3);min-width:20px;text-align:center">${i+1}</div>
+          <div style="flex:1;min-width:0">
+            <div style="font-weight:700;font-size:0.9rem">${e.name} <span style="font-weight:400;font-size:0.72rem;color:var(--text3)">${e.nameEn}</span></div>
+            <div style="font-size:0.75rem;color:var(--text2);margin-top:2px">${e.planSets}组 × ${e.planReps}次 · ${COMPOUND.has(e.id)?'复合动作':'孤立动作'} · ${e.equip}</div>
+          </div>
+        </div>
+      `).join('')}
+      <button class="btn btn-primary mt12" onclick="startPlanTraining()">🚀 一键开始训练</button>
+    </div>
+  `;
+
+  // Scroll to result
+  resultEl.scrollIntoView({ behavior: 'smooth' });
+}
+
+function startPlanTraining() {
+  if (!aiPlan || !aiPlan.length) return;
+  selectedTrainingParts = [...new Set(aiPlan.map(e => e.part))];
+  closeModal();
+  switchPage('training');
+  // After training page renders, pre-fill the plan data
+  setTimeout(() => {
+    aiPlan.forEach(e => {
+      const container = document.getElementById('sets-' + e.id);
+      if (!container) return;
+      container.innerHTML = '';
+      for (let i = 0; i < e.planSets; i++) {
+        addTrainingSet(e.id);
+      }
+    });
+    aiPlan = null;
+  }, 200);
+}
+
+// ============ INIT ============
+function init() {
+  // Charts
+  const ctx1 = document.getElementById('progressChart').getContext('2d');
+  currentChart = new Chart(ctx1, { type:'line', data:{labels:[],datasets:[]}, options:{responsive:true,maintainAspectRatio:false} });
+  const ctx2 = document.getElementById('pieChart').getContext('2d');
+  currentPieChart = new Chart(ctx2, { type:'doughnut', data:{labels:[],datasets:[]}, options:{responsive:true,maintainAspectRatio:false} });
+
+  updateStreakUI();
+  renderHome();
+  renderLibrary();
+
+  // Inject PWA manifest as blob URL (single-file workaround)
+  const manifestData = {
+    name: '健身助手', short_name: '健身',
+    description: '个人健身训练记录与动作库',
+    start_url: '.',
+    display: 'standalone',
+    orientation: 'portrait',
+    background_color: '#FFFFFF',
+    theme_color: '#FFFFFF',
+    icons: [
+      { src: document.querySelector('link[rel="icon"]').href, sizes: '192x192', type: 'image/png' },
+      { src: document.querySelector('link[rel="icon"]').href, sizes: '512x512', type: 'image/png' }
+    ]
+  };
+  const manifestBlob = new Blob([JSON.stringify(manifestData)], { type: 'application/json' });
+  const manifestLink = document.createElement('link');
+  manifestLink.rel = 'manifest';
+  manifestLink.href = URL.createObjectURL(manifestBlob);
+  document.head.appendChild(manifestLink);
+}
+
+init();
+</script>
+</body>
+</html>
