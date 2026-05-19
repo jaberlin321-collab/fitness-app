@@ -89,7 +89,7 @@ body{
 }
 .btn:active{transform:scale(0.96)}
 .btn-primary{background:var(--accent);color:#fff;width:100%}
-.btn-secondary{background:var(--bg);color:var(--accent);border:2px solid var(--accent)}
+.btn-secondary{background:var(--bg);color:var(--accent);border:2px solid var(--accent)}.btn-icon-sm{background:var(--bg2);color:var(--text2);border:1px solid var(--border);border-radius:8px;cursor:pointer;transition:all .15s}.btn-icon-sm:hover{background:var(--border);color:var(--text1)}.btn-icon-sm:active{transform:scale(.92)}
 .btn-sm{padding:8px 16px;font-size:0.8rem;width:auto}
 .btn-block{width:100%}
 
@@ -483,47 +483,47 @@ function saveAchievements(a) { STORAGE.set('achievements', a); }
 // ============ EXERCISE DATABASE ============
 const EXERCISES = [
   // 练背
-  {id:'pull-up',name:'引体向上',nameEn:'Pull-Up',part:'练背',muscle:'背阔肌、肱二头肌',equip:'单杠',altEquip:'弹力带辅助 / 高位下拉机',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/pull-up.gif',steps:['正手握杠，握距略比肩宽','肩胛骨收紧，核心紧绷','背部发力将身体上拉，下巴过杠','控制身体缓慢下放至手臂伸直'],mistakes:['借力摆荡','耸肩代偿','下放过快','下巴未过杠'],tips:['先做肩胛骨激活训练','下放过程持续3-4秒','轻握弹力带辅助减重']},
-  {id:'lat-pulldown',name:'坐姿绳索下拉',nameEn:'Lat Pulldown',part:'练背',muscle:'背阔肌、大圆肌',equip:'高位下拉机',altEquip:'弹力带 + 固定锚点',sets:'3-4',reps:'10-15',gif:'https://muscles.wiki/assets/exercises/lat-pulldown.gif',steps:['坐稳，大腿卡住护垫','正手宽握横杆','背部发力下拉至锁骨位置','缓慢还原至手臂伸直'],mistakes:['身体过度后仰','借力猛拉','还原过快'],tips:['下拉时胸部上挺','想象肘部向臀部方向拉','控制节奏2-1-3']},
-  {id:'seated-row',name:'坐姿划船',nameEn:'Seated Cable Row',part:'练背',muscle:'中背部、菱形肌',equip:'坐姿划船机',altEquip:'弹力带坐姿划船',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/seated-cable-row.gif',steps:['双脚踩踏板，膝盖微屈','双手握住V把，背部挺直','肩胛骨内收，将把手拉向腹部','控制还原，感受背部拉伸'],mistakes:['弓背含胸','身体过度后仰借力','耸肩'],tips:['先做肩胛骨后缩再拉','顶峰收缩1-2秒','腰背始终挺直']},
+  {id:'pull-up',name:'引体向上',nameEn:'Pull-Up',part:'练背',muscle:'背阔肌、肱二头肌',equip:'单杠',altEquip:'弹力带辅助 / 高位下拉机',sets:'3-4',reps:'8-12',gif:'https://exrx.net/AnimatedEx/BackGeneral/PullUp.gif',steps:['正手握杠，握距略比肩宽','肩胛骨收紧，核心紧绷','背部发力将身体上拉，下巴过杠','控制身体缓慢下放至手臂伸直'],mistakes:['借力摆荡','耸肩代偿','下放过快','下巴未过杠'],tips:['先做肩胛骨激活训练','下放过程持续3-4秒','轻握弹力带辅助减重']},
+  {id:'lat-pulldown',name:'坐姿绳索下拉',nameEn:'Lat Pulldown',part:'练背',muscle:'背阔肌、大圆肌',equip:'高位下拉机',altEquip:'弹力带 + 固定锚点',sets:'3-4',reps:'10-15',gif:'https://exrx.net/AnimatedEx/LatissimusDorsi/LATPulldown.gif',steps:['坐稳，大腿卡住护垫','正手宽握横杆','背部发力下拉至锁骨位置','缓慢还原至手臂伸直'],mistakes:['身体过度后仰','借力猛拉','还原过快'],tips:['下拉时胸部上挺','想象肘部向臀部方向拉','控制节奏2-1-3']},
+  {id:'seated-row',name:'坐姿划船',nameEn:'Seated Cable Row',part:'练背',muscle:'中背部、菱形肌',equip:'坐姿划船机',altEquip:'弹力带坐姿划船',sets:'3-4',reps:'10-12',gif:'https://exrx.net/AnimatedEx/BackGeneral/SeatedCableRow.gif',steps:['双脚踩踏板，膝盖微屈','双手握住V把，背部挺直','肩胛骨内收，将把手拉向腹部','控制还原，感受背部拉伸'],mistakes:['弓背含胸','身体过度后仰借力','耸肩'],tips:['先做肩胛骨后缩再拉','顶峰收缩1-2秒','腰背始终挺直']},
   {id:'single-arm-dumbbell-row',name:'单臂哑铃划船',nameEn:'One-Arm Dumbbell Row',part:'练背',muscle:'背阔肌（单侧）、菱形肌',equip:'哑铃 + 平板凳',altEquip:'壶铃 / 弹力带固定后拉',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/one-arm-dumbbell-row.gif',steps:['一侧膝盖和手掌撑在凳上','另一只手持哑铃自然下垂','背部发力将哑铃拉向髋部','顶峰收缩后缓慢下放'],mistakes:['用肱二头肌发力','身体旋转借力','弓背'],tips:['想象肘部向天花板方向拉','下放时充分拉伸背阔肌','保持头部与脊柱一条线']},
-  {id:'deadlift',name:'硬拉',nameEn:'Deadlift',part:'练背',muscle:'竖脊肌、臀大肌、腘绳肌',equip:'杠铃',altEquip:'哑铃硬拉 / 壶铃硬拉',sets:'3-4',reps:'6-10',gif:'https://muscles.wiki/assets/exercises/deadlift.gif',steps:['双脚与髋同宽，杠铃贴近小腿','屈髋屈膝，双手正握杠铃','核心收紧，背部挺直','同时伸髋伸膝站起','沿腿部轨迹缓慢下放'],mistakes:['弓背圆肩','杠铃远离身体','先抬臀再拉背','过度后仰'],tips:['始终贴着小腿上升','想象双脚蹬地发力','穿戴腰带更安全']},
-  {id:'barbell-row',name:'俯身杠铃划船',nameEn:'Barbell Row',part:'练背',muscle:'背阔肌、菱形肌、竖脊肌',equip:'杠铃',altEquip:'哑铃俯身划船 / T杆划船',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/barbell-row.gif',steps:['双脚与肩同宽，微屈膝','俯身至躯干与地面约45°','正手握住杠铃','将杠铃沿大腿方向拉向腹部','控制还原'],mistakes:['弓背','身体起伏借力','握距过宽或过窄'],tips:['核心始终收紧保护腰椎','不要用爆发力猛拉','手肘贴近身体']},
+  {id:'deadlift',name:'硬拉',nameEn:'Deadlift',part:'练背',muscle:'竖脊肌、臀大肌、腘绳肌',equip:'杠铃',altEquip:'哑铃硬拉 / 壶铃硬拉',sets:'3-4',reps:'6-10',gif:'https://exrx.net/AnimatedEx/ErectorSpinae/Deadlift.gif',steps:['双脚与髋同宽，杠铃贴近小腿','屈髋屈膝，双手正握杠铃','核心收紧，背部挺直','同时伸髋伸膝站起','沿腿部轨迹缓慢下放'],mistakes:['弓背圆肩','杠铃远离身体','先抬臀再拉背','过度后仰'],tips:['始终贴着小腿上升','想象双脚蹬地发力','穿戴腰带更安全']},
+  {id:'barbell-row',name:'俯身杠铃划船',nameEn:'Barbell Row',part:'练背',muscle:'背阔肌、菱形肌、竖脊肌',equip:'杠铃',altEquip:'哑铃俯身划船 / T杆划船',sets:'3-4',reps:'8-12',gif:'https://exrx.net/AnimatedEx/LatissimusDorsi/BentOverRow.gif',steps:['双脚与肩同宽，微屈膝','俯身至躯干与地面约45°','正手握住杠铃','将杠铃沿大腿方向拉向腹部','控制还原'],mistakes:['弓背','身体起伏借力','握距过宽或过窄'],tips:['核心始终收紧保护腰椎','不要用爆发力猛拉','手肘贴近身体']},
   // 练腿
-  {id:'squat',name:'深蹲',nameEn:'Squat',part:'练腿',muscle:'股四头肌、臀大肌、腘绳肌',equip:'杠铃（自由重量）',altEquip:'哑铃高脚杯深蹲 / 自重深蹲',sets:'3-5',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/squat.gif',steps:['杠铃置于斜方肌上方','双脚略宽于肩，脚尖微外八','核心收紧，屈髋屈膝下蹲','大腿低于平行线后站起'],mistakes:['膝盖内扣','脚跟离地','弓背','深度不够'],tips:['想象脚掌抓地','膝盖方向与脚尖一致','下蹲前先吸气收紧核心']},
-  {id:'leg-press',name:'腿举',nameEn:'Leg Press',part:'练腿',muscle:'股四头肌、臀大肌',equip:'腿举机',altEquip:'哑铃高脚杯深蹲',sets:'3-4',reps:'10-15',gif:'https://muscles.wiki/assets/exercises/leg-press.gif',steps:['坐好，背部贴紧靠背','双脚放在踏板上与肩同宽','解锁安全杆，屈膝下放','蹬至膝盖微屈不锁死'],mistakes:['膝盖完全锁死','臀部离开靠背','脚位过高或过低'],tips:['全程臀部贴紧靠背','顶峰不要锁死膝盖','改变脚位刺激不同肌群']},
-  {id:'romanian-deadlift',name:'罗马尼亚硬拉',nameEn:'Romanian Deadlift',part:'练腿',muscle:'腘绳肌、臀大肌',equip:'杠铃',altEquip:'哑铃罗马尼亚硬拉',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/romanian-deadlift.gif',steps:['双脚与髋同宽，微屈膝','持杠铃于大腿前方','保持背部挺直，屈髋将杠铃降低','感受腘绳肌拉伸后伸髋站起'],mistakes:['弓背','膝盖弯曲过度','杠铃远离身体'],tips:['微屈膝保持不变','贴着腿部下放','感受到拉伸感即停']},
-  {id:'leg-curl',name:'腿弯举',nameEn:'Leg Curl',part:'练腿',muscle:'腘绳肌',equip:'腿弯举机',altEquip:'弹力带腿弯举 / 瑜伽球腿弯举',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/leg-curl.gif',steps:['俯卧在腿弯举机上','脚踝放在滚垫下方','弯举双腿至最大幅度','缓慢还原'],mistakes:['借力猛甩','还原过快','髋部离开凳面'],tips:['顶峰收缩1-2秒','还原过程持续3秒','双脚可做不同角度']},
-  {id:'leg-extension',name:'腿伸展',nameEn:'Leg Extension',part:'练腿',muscle:'股四头肌',equip:'腿伸展机',altEquip:'弹力带坐姿腿伸展',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/leg-extension.gif',steps:['调好靠背和脚踝滚垫','双腿伸展至膝盖完全伸直','顶峰收缩1秒','缓慢还原'],mistakes:['膝盖锁死过猛','借力摆动','还原过快'],tips:['顶峰停留感受肌肉收缩','脚尖可微内旋或外旋','不要用惯性']},
-  {id:'bulgarian-split-squat',name:'保加利亚分腿蹲',nameEn:'Bulgarian Split Squat',part:'练腿',muscle:'股四头肌、臀大肌（单侧）',equip:'哑铃 + 平板凳',altEquip:'自重保加利亚蹲',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/bulgarian-split-squat.gif',steps:['后脚背放在凳上','前脚向前迈出足够距离','持哑铃于体侧','屈前膝下蹲至大腿平行'],mistakes:['前膝过度超过脚尖','重心不稳','弓背'],tips:['躯干略微前倾','专注于前腿发力','先自重掌握平衡']},
-  {id:'calf-raise',name:'小腿提踵',nameEn:'Calf Raise',part:'练腿',muscle:'腓肠肌、比目鱼肌',equip:'提踵机 / 史密斯机',altEquip:'哑铃单腿提踵 / 台阶自重提踵',sets:'4-5',reps:'15-20',gif:'https://muscles.wiki/assets/exercises/calf-raise.gif',steps:['脚掌踩在踏板上，脚跟悬空','身体直立保持稳定','尽可能高地提起脚跟','缓慢下放至脚跟低于踏板'],mistakes:['动作过快','幅度不够','膝盖弯曲借力'],tips:['下放过程充分拉伸','顶峰停顿1秒','膝盖微屈不分腿']},
+  {id:'squat',name:'深蹲',nameEn:'Squat',part:'练腿',muscle:'股四头肌、臀大肌、腘绳肌',equip:'杠铃（自由重量）',altEquip:'哑铃高脚杯深蹲 / 自重深蹲',sets:'3-5',reps:'8-12',gif:'https://exrx.net/AnimatedEx/Quadriceps/BBSquat.gif',steps:['杠铃置于斜方肌上方','双脚略宽于肩，脚尖微外八','核心收紧，屈髋屈膝下蹲','大腿低于平行线后站起'],mistakes:['膝盖内扣','脚跟离地','弓背','深度不够'],tips:['想象脚掌抓地','膝盖方向与脚尖一致','下蹲前先吸气收紧核心']},
+  {id:'leg-press',name:'腿举',nameEn:'Leg Press',part:'练腿',muscle:'股四头肌、臀大肌',equip:'腿举机',altEquip:'哑铃高脚杯深蹲',sets:'3-4',reps:'10-15',gif:'',steps:['坐好，背部贴紧靠背','双脚放在踏板上与肩同宽','解锁安全杆，屈膝下放','蹬至膝盖微屈不锁死'],mistakes:['膝盖完全锁死','臀部离开靠背','脚位过高或过低'],tips:['全程臀部贴紧靠背','顶峰不要锁死膝盖','改变脚位刺激不同肌群']},
+  {id:'romanian-deadlift',name:'罗马尼亚硬拉',nameEn:'Romanian Deadlift',part:'练腿',muscle:'腘绳肌、臀大肌',equip:'杠铃',altEquip:'哑铃罗马尼亚硬拉',sets:'3-4',reps:'10-12',gif:'https://exrx.net/AnimatedEx/Hamstrings/RomanianDeadlift.gif',steps:['双脚与髋同宽，微屈膝','持杠铃于大腿前方','保持背部挺直，屈髋将杠铃降低','感受腘绳肌拉伸后伸髋站起'],mistakes:['弓背','膝盖弯曲过度','杠铃远离身体'],tips:['微屈膝保持不变','贴着腿部下放','感受到拉伸感即停']},
+  {id:'leg-curl',name:'腿弯举',nameEn:'Leg Curl',part:'练腿',muscle:'腘绳肌',equip:'腿弯举机',altEquip:'弹力带腿弯举 / 瑜伽球腿弯举',sets:'3-4',reps:'12-15',gif:'',steps:['俯卧在腿弯举机上','脚踝放在滚垫下方','弯举双腿至最大幅度','缓慢还原'],mistakes:['借力猛甩','还原过快','髋部离开凳面'],tips:['顶峰收缩1-2秒','还原过程持续3秒','双脚可做不同角度']},
+  {id:'leg-extension',name:'腿伸展',nameEn:'Leg Extension',part:'练腿',muscle:'股四头肌',equip:'腿伸展机',altEquip:'弹力带坐姿腿伸展',sets:'3-4',reps:'12-15',gif:'',steps:['调好靠背和脚踝滚垫','双腿伸展至膝盖完全伸直','顶峰收缩1秒','缓慢还原'],mistakes:['膝盖锁死过猛','借力摆动','还原过快'],tips:['顶峰停留感受肌肉收缩','脚尖可微内旋或外旋','不要用惯性']},
+  {id:'bulgarian-split-squat',name:'保加利亚分腿蹲',nameEn:'Bulgarian Split Squat',part:'练腿',muscle:'股四头肌、臀大肌（单侧）',equip:'哑铃 + 平板凳',altEquip:'自重保加利亚蹲',sets:'3-4',reps:'10-12',gif:'',steps:['后脚背放在凳上','前脚向前迈出足够距离','持哑铃于体侧','屈前膝下蹲至大腿平行'],mistakes:['前膝过度超过脚尖','重心不稳','弓背'],tips:['躯干略微前倾','专注于前腿发力','先自重掌握平衡']},
+  {id:'calf-raise',name:'小腿提踵',nameEn:'Calf Raise',part:'练腿',muscle:'腓肠肌、比目鱼肌',equip:'提踵机 / 史密斯机',altEquip:'哑铃单腿提踵 / 台阶自重提踵',sets:'4-5',reps:'15-20',gif:'',steps:['脚掌踩在踏板上，脚跟悬空','身体直立保持稳定','尽可能高地提起脚跟','缓慢下放至脚跟低于踏板'],mistakes:['动作过快','幅度不够','膝盖弯曲借力'],tips:['下放过程充分拉伸','顶峰停顿1秒','膝盖微屈不分腿']},
   // 练胸
-  {id:'bench-press',name:'平板杠铃卧推',nameEn:'Bench Press',part:'练胸',muscle:'胸大肌、肱三头肌、三角肌前束',equip:'杠铃 + 平板凳',altEquip:'哑铃平板卧推',sets:'3-5',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/bench-press.gif',steps:['平躺在凳上，眼睛在杠铃下方','握距略宽于肩','出杠后吸气收紧核心','缓慢下放杠铃至胸中部','推起至手臂伸直'],mistakes:['弹胸借力','肩膀离开凳面','握距过宽伤肩','脚不踩实'],tips:['肩胛骨始终收紧','脚掌踩实地面','想象把身体推离杠铃']},
-  {id:'incline-dumbbell-press',name:'上斜哑铃卧推',nameEn:'Incline Dumbbell Press',part:'练胸',muscle:'胸大肌上部、三角肌前束',equip:'哑铃 + 可调凳（30-45°）',altEquip:'上斜杠铃卧推',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/incline-dumbbell-press.gif',steps:['调整凳角度30-45°','持哑铃于大腿上，后躺举起','哑铃与胸上部对齐','推起至手臂伸直','缓慢下放至胸两侧'],mistakes:['凳面角度过高变肩推','手腕弯曲','哑铃碰撞'],tips:['30°刺激上胸最佳','手腕保持中立','推起时哑铃微内旋']},
-  {id:'dumbbell-fly',name:'平板哑铃飞鸟',nameEn:'Dumbbell Fly',part:'练胸',muscle:'胸大肌（拉伸重点）',equip:'哑铃 + 平板凳',altEquip:'绳索飞鸟 / 弹力带飞鸟',sets:'3-4',reps:'10-15',gif:'https://muscles.wiki/assets/exercises/dumbbell-fly.gif',steps:['平躺，哑铃在胸上方对握','微屈肘保持固定角度','双臂向外打开至胸肌充分拉伸','胸部发力将哑铃合拢'],mistakes:['手臂伸太直','重量过大','下放过快拉伤肩膀'],tips:['想象环抱大树','手肘角度始终保持不变','下放至感到拉伸即停']},
-  {id:'cable-crossover',name:'绳索夹胸',nameEn:'Cable Crossover',part:'练胸',muscle:'胸大肌（中缝）',equip:'龙门架 + 绳索',altEquip:'弹力带夹胸',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/cable-crossover.gif',steps:['将滑轮调至高位','双手各握一个把手','身体前倾，微屈肘','双手在胸前汇合夹紧'],mistakes:['手臂伸太直','身体借力前倾','动作过快'],tips:['顶峰挤压1-2秒','手肘微屈不变','调节滑轮角度刺激不同区域']},
-  {id:'dips',name:'双杠臂屈伸',nameEn:'Dips',part:'练胸',muscle:'胸大肌下部、肱三头肌',equip:'双杠',altEquip:'凳上臂屈伸 / 弹力带辅助',sets:'3-4',reps:'8-15',gif:'https://muscles.wiki/assets/exercises/dips.gif',steps:['双手撑在双杠上','身体前倾约30°','屈肘下放至肩膀低于肘部','推起至手臂伸直'],mistakes:['身体过于直上直下','肩膀受伤（下放过深）','借力摆荡'],tips:['身体前倾更多刺激胸部','下放深度适中','无法完成可用弹力带辅助']},
-  {id:'push-up',name:'俯卧撑',nameEn:'Push-Up',part:'练胸',muscle:'胸大肌、肱三头肌、核心',equip:'自重（无需器械）',altEquip:'跪姿俯卧撑 / 上斜俯卧撑',sets:'3-4',reps:'力竭',gif:'https://muscles.wiki/assets/exercises/push-up.gif',steps:['双手略宽于肩，身体成一条线','核心收紧，缓慢下放至胸部接近地面','推起回到起始位置'],mistakes:['塌腰','手肘外展过度','半程动作'],tips:['全程身体成板','手肘与身体呈45°','变化手位刺激不同区域']},
+  {id:'bench-press',name:'平板杠铃卧推',nameEn:'Bench Press',part:'练胸',muscle:'胸大肌、肱三头肌、三角肌前束',equip:'杠铃 + 平板凳',altEquip:'哑铃平板卧推',sets:'3-5',reps:'8-12',gif:'https://exrx.net/AnimatedEx/PectoralSternal/BenchPress.gif',steps:['平躺在凳上，眼睛在杠铃下方','握距略宽于肩','出杠后吸气收紧核心','缓慢下放杠铃至胸中部','推起至手臂伸直'],mistakes:['弹胸借力','肩膀离开凳面','握距过宽伤肩','脚不踩实'],tips:['肩胛骨始终收紧','脚掌踩实地面','想象把身体推离杠铃']},
+  {id:'incline-dumbbell-press',name:'上斜哑铃卧推',nameEn:'Incline Dumbbell Press',part:'练胸',muscle:'胸大肌上部、三角肌前束',equip:'哑铃 + 可调凳（30-45°）',altEquip:'上斜杠铃卧推',sets:'3-4',reps:'10-12',gif:'',steps:['调整凳角度30-45°','持哑铃于大腿上，后躺举起','哑铃与胸上部对齐','推起至手臂伸直','缓慢下放至胸两侧'],mistakes:['凳面角度过高变肩推','手腕弯曲','哑铃碰撞'],tips:['30°刺激上胸最佳','手腕保持中立','推起时哑铃微内旋']},
+  {id:'dumbbell-fly',name:'平板哑铃飞鸟',nameEn:'Dumbbell Fly',part:'练胸',muscle:'胸大肌（拉伸重点）',equip:'哑铃 + 平板凳',altEquip:'绳索飞鸟 / 弹力带飞鸟',sets:'3-4',reps:'10-15',gif:'',steps:['平躺，哑铃在胸上方对握','微屈肘保持固定角度','双臂向外打开至胸肌充分拉伸','胸部发力将哑铃合拢'],mistakes:['手臂伸太直','重量过大','下放过快拉伤肩膀'],tips:['想象环抱大树','手肘角度始终保持不变','下放至感到拉伸即停']},
+  {id:'cable-crossover',name:'绳索夹胸',nameEn:'Cable Crossover',part:'练胸',muscle:'胸大肌（中缝）',equip:'龙门架 + 绳索',altEquip:'弹力带夹胸',sets:'3-4',reps:'12-15',gif:'',steps:['将滑轮调至高位','双手各握一个把手','身体前倾，微屈肘','双手在胸前汇合夹紧'],mistakes:['手臂伸太直','身体借力前倾','动作过快'],tips:['顶峰挤压1-2秒','手肘微屈不变','调节滑轮角度刺激不同区域']},
+  {id:'dips',name:'双杠臂屈伸',nameEn:'Dips',part:'练胸',muscle:'胸大肌下部、肱三头肌',equip:'双杠',altEquip:'凳上臂屈伸 / 弹力带辅助',sets:'3-4',reps:'8-15',gif:'',steps:['双手撑在双杠上','身体前倾约30°','屈肘下放至肩膀低于肘部','推起至手臂伸直'],mistakes:['身体过于直上直下','肩膀受伤（下放过深）','借力摆荡'],tips:['身体前倾更多刺激胸部','下放深度适中','无法完成可用弹力带辅助']},
+  {id:'push-up',name:'俯卧撑',nameEn:'Push-Up',part:'练胸',muscle:'胸大肌、肱三头肌、核心',equip:'自重（无需器械）',altEquip:'跪姿俯卧撑 / 上斜俯卧撑',sets:'3-4',reps:'力竭',gif:'https://exrx.net/AnimatedEx/PectoralSternal/PushUp.gif',steps:['双手略宽于肩，身体成一条线','核心收紧，缓慢下放至胸部接近地面','推起回到起始位置'],mistakes:['塌腰','手肘外展过度','半程动作'],tips:['全程身体成板','手肘与身体呈45°','变化手位刺激不同区域']},
   // 手臂
-  {id:'barbell-curl',name:'杠铃弯举',nameEn:'Barbell Curl',part:'手臂',muscle:'肱二头肌',equip:'杠铃（直杆/EZ杆）',altEquip:'哑铃弯举',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/barbell-curl.gif',steps:['双脚与肩同宽，手臂自然下垂','上臂固定不动','弯举杠铃至肩部高度','顶峰收缩后缓慢下放'],mistakes:['身体摆动借力','手肘前移','下放过快'],tips:['背部靠墙防止借力','顶峰挤压1秒','下放过程3秒']},
-  {id:'hammer-curl',name:'哑铃锤式弯举',nameEn:'Hammer Curl',part:'手臂',muscle:'肱二头肌、肱肌（前臂）',equip:'哑铃',altEquip:'绳索锤式弯举',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/hammer-curl.gif',steps:['持哑铃，掌心相对（锤式握法）','上臂固定，弯举哑铃','顶峰收缩后缓慢还原'],mistakes:['身体摆动','上臂移动','手腕旋转'],tips:['保持锤式握法不变','可双手交替完成','感受前臂外侧发力']},
-  {id:'concentration-curl',name:'集中弯举',nameEn:'Concentration Curl',part:'手臂',muscle:'肱二头肌（孤立训练）',equip:'哑铃 + 平板凳',altEquip:'单臂绳索弯举',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/concentration-curl.gif',steps:['坐姿，上臂后侧靠在大腿内侧','持哑铃的手臂完全伸直','孤立弯举哑铃至肩膀','顶峰收缩后缓慢下放'],mistakes:['借力摆动','上臂离开大腿','动作过快'],tips:['这是纯孤立动作，重量不必大','顶峰旋转手腕增强收缩','慢速控制效果最好']},
-  {id:'tricep-pushdown',name:'绳索下压',nameEn:'Tricep Pushdown',part:'手臂',muscle:'肱三头肌',equip:'龙门架 + 绳索/直杆',altEquip:'弹力带下压',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/tricep-pushdown.gif',steps:['面对龙门架，握住绳索','上臂贴紧身体两侧','下压至手臂完全伸直','控制还原至上臂90°'],mistakes:['上臂移动','身体借力下压','还原过高'],tips:['上臂如钉在身体两侧','顶峰分绳增强收缩','身体微前倾更稳定']},
-  {id:'close-grip-bench',name:'窄距卧推',nameEn:'Close-Grip Bench Press',part:'手臂',muscle:'肱三头肌、胸大肌内侧',equip:'杠铃 + 平板凳',altEquip:'窄距俯卧撑',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/close-grip-bench-press.gif',steps:['握距与肩同宽或略窄','下放杠铃至下胸部','推起至手臂伸直','保持肘部贴近身体'],mistakes:['握距过窄伤手腕','肘部外展','弹胸'],tips:['肘部始终保持贴近身体','重量比宽握卧推轻','专注于三头收缩']},
-  {id:'overhead-tricep-extension',name:'过头哑铃臂屈伸',nameEn:'Overhead Tricep Extension',part:'手臂',muscle:'肱三头肌（长头）',equip:'哑铃',altEquip:'绳索过头臂屈伸 / 弹力带',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/overhead-tricep-extension.gif',steps:['坐姿或站姿，双手持哑铃举过头顶','缓慢屈肘将哑铃降至脑后','肱三头肌发力伸肘回到起始'],mistakes:['上臂移动','重量过大伤肘','弓背'],tips:['上臂保持靠近耳朵','可单手做以纠正不平衡','慢速下放保护肘关节']},
+  {id:'barbell-curl',name:'杠铃弯举',nameEn:'Barbell Curl',part:'手臂',muscle:'肱二头肌',equip:'杠铃（直杆/EZ杆）',altEquip:'哑铃弯举',sets:'3-4',reps:'10-12',gif:'https://exrx.net/AnimatedEx/Biceps/BBCurl.gif',steps:['双脚与肩同宽，手臂自然下垂','上臂固定不动','弯举杠铃至肩部高度','顶峰收缩后缓慢下放'],mistakes:['身体摆动借力','手肘前移','下放过快'],tips:['背部靠墙防止借力','顶峰挤压1秒','下放过程3秒']},
+  {id:'hammer-curl',name:'哑铃锤式弯举',nameEn:'Hammer Curl',part:'手臂',muscle:'肱二头肌、肱肌（前臂）',equip:'哑铃',altEquip:'绳索锤式弯举',sets:'3-4',reps:'10-12',gif:'',steps:['持哑铃，掌心相对（锤式握法）','上臂固定，弯举哑铃','顶峰收缩后缓慢还原'],mistakes:['身体摆动','上臂移动','手腕旋转'],tips:['保持锤式握法不变','可双手交替完成','感受前臂外侧发力']},
+  {id:'concentration-curl',name:'集中弯举',nameEn:'Concentration Curl',part:'手臂',muscle:'肱二头肌（孤立训练）',equip:'哑铃 + 平板凳',altEquip:'单臂绳索弯举',sets:'3-4',reps:'10-12',gif:'',steps:['坐姿，上臂后侧靠在大腿内侧','持哑铃的手臂完全伸直','孤立弯举哑铃至肩膀','顶峰收缩后缓慢下放'],mistakes:['借力摆动','上臂离开大腿','动作过快'],tips:['这是纯孤立动作，重量不必大','顶峰旋转手腕增强收缩','慢速控制效果最好']},
+  {id:'tricep-pushdown',name:'绳索下压',nameEn:'Tricep Pushdown',part:'手臂',muscle:'肱三头肌',equip:'龙门架 + 绳索/直杆',altEquip:'弹力带下压',sets:'3-4',reps:'12-15',gif:'https://exrx.net/AnimatedEx/TricepsBrachii/PushdownVBar.gif',steps:['面对龙门架，握住绳索','上臂贴紧身体两侧','下压至手臂完全伸直','控制还原至上臂90°'],mistakes:['上臂移动','身体借力下压','还原过高'],tips:['上臂如钉在身体两侧','顶峰分绳增强收缩','身体微前倾更稳定']},
+  {id:'close-grip-bench',name:'窄距卧推',nameEn:'Close-Grip Bench Press',part:'手臂',muscle:'肱三头肌、胸大肌内侧',equip:'杠铃 + 平板凳',altEquip:'窄距俯卧撑',sets:'3-4',reps:'8-12',gif:'',steps:['握距与肩同宽或略窄','下放杠铃至下胸部','推起至手臂伸直','保持肘部贴近身体'],mistakes:['握距过窄伤手腕','肘部外展','弹胸'],tips:['肘部始终保持贴近身体','重量比宽握卧推轻','专注于三头收缩']},
+  {id:'overhead-tricep-extension',name:'过头哑铃臂屈伸',nameEn:'Overhead Tricep Extension',part:'手臂',muscle:'肱三头肌（长头）',equip:'哑铃',altEquip:'绳索过头臂屈伸 / 弹力带',sets:'3-4',reps:'10-12',gif:'',steps:['坐姿或站姿，双手持哑铃举过头顶','缓慢屈肘将哑铃降至脑后','肱三头肌发力伸肘回到起始'],mistakes:['上臂移动','重量过大伤肘','弓背'],tips:['上臂保持靠近耳朵','可单手做以纠正不平衡','慢速下放保护肘关节']},
   // 肩部
-  {id:'seated-dumbbell-press',name:'坐姿哑铃推举',nameEn:'Seated Dumbbell Press',part:'肩部',muscle:'三角肌前束、中束',equip:'哑铃 + 可调凳',altEquip:'杠铃推举 / 器械推举',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/seated-dumbbell-press.gif',steps:['坐在凳上，靠背调至80-90°','哑铃举在肩膀两侧','推举至头顶手臂伸直','缓慢下放回起始位置'],mistakes:['弓背过度','借力推举','下放过低伤肩'],tips:['核心收紧稳定躯干','手肘不要低于肩膀','旋转手腕增加收缩']},
-  {id:'lateral-raise',name:'侧平举',nameEn:'Lateral Raise',part:'肩部',muscle:'三角肌中束',equip:'哑铃',altEquip:'绳索侧平举 / 弹力带侧平举',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/lateral-raise.gif',steps:['双手持哑铃于体侧','微屈肘保持固定角度','肩部发力将哑铃向两侧举起','举至与肩同高后缓慢下放'],mistakes:['重量过大借力','耸肩用斜方肌','手臂伸太直'],tips:['轻重量高次数效果更好','想象倒水壶的动作','顶峰停留1秒']},
-  {id:'rear-delt-fly',name:'俯身飞鸟',nameEn:'Rear Delt Fly',part:'肩部',muscle:'三角肌后束',equip:'哑铃',altEquip:'面拉 / 弹力带俯身飞鸟',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/rear-delt-fly.gif',steps:['俯身至躯干接近平行地面','持哑铃下垂，微屈肘','肩后束发力向两侧打开','顶峰收缩后缓慢还原'],mistakes:['用背部发力','身体起伏借力','手臂伸太直'],tips:['轻盈重量，专注后束发力','想象用肘部画弧线','顶峰停留感受收缩']},
-  {id:'front-raise',name:'前平举',nameEn:'Front Raise',part:'肩部',muscle:'三角肌前束',equip:'哑铃 / 杠铃片',altEquip:'绳索前平举',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/front-raise.gif',steps:['双手持哑铃/杠铃片于大腿前方','手臂微屈，前举至与肩同高','顶峰停留后缓慢下放'],mistakes:['借力摆动','举得过高用斜方肌','动作过快'],tips:['举至下巴高度即可','交替做减少借力','重量宜轻']},
-  {id:'face-pull',name:'面拉',nameEn:'Face Pull',part:'肩部',muscle:'三角肌后束、肩袖肌群',equip:'龙门架 + 绳索',altEquip:'弹力带面拉',sets:'3-4',reps:'12-15',gif:'https://muscles.wiki/assets/exercises/face-pull.gif',steps:['将滑轮调至上胸高度','双手拉住绳索两端','向后拉向面部，双手在耳朵两侧分开','顶峰收缩1-2秒'],mistakes:['重量过大借力','身体后仰','手腕弯曲'],tips:['这是肩袖健康必做动作','轻重量高质量','想象展示二头肌']},
+  {id:'seated-dumbbell-press',name:'坐姿哑铃推举',nameEn:'Seated Dumbbell Press',part:'肩部',muscle:'三角肌前束、中束',equip:'哑铃 + 可调凳',altEquip:'杠铃推举 / 器械推举',sets:'3-4',reps:'8-12',gif:'https://exrx.net/AnimatedEx/DeltoidAnterior/DBShoulderPress.gif',steps:['坐在凳上，靠背调至80-90°','哑铃举在肩膀两侧','推举至头顶手臂伸直','缓慢下放回起始位置'],mistakes:['弓背过度','借力推举','下放过低伤肩'],tips:['核心收紧稳定躯干','手肘不要低于肩膀','旋转手腕增加收缩']},
+  {id:'lateral-raise',name:'侧平举',nameEn:'Lateral Raise',part:'肩部',muscle:'三角肌中束',equip:'哑铃',altEquip:'绳索侧平举 / 弹力带侧平举',sets:'3-4',reps:'12-15',gif:'https://exrx.net/AnimatedEx/DeltoidLateral/DBLateralRaise.gif',steps:['双手持哑铃于体侧','微屈肘保持固定角度','肩部发力将哑铃向两侧举起','举至与肩同高后缓慢下放'],mistakes:['重量过大借力','耸肩用斜方肌','手臂伸太直'],tips:['轻重量高次数效果更好','想象倒水壶的动作','顶峰停留1秒']},
+  {id:'rear-delt-fly',name:'俯身飞鸟',nameEn:'Rear Delt Fly',part:'肩部',muscle:'三角肌后束',equip:'哑铃',altEquip:'面拉 / 弹力带俯身飞鸟',sets:'3-4',reps:'12-15',gif:'',steps:['俯身至躯干接近平行地面','持哑铃下垂，微屈肘','肩后束发力向两侧打开','顶峰收缩后缓慢还原'],mistakes:['用背部发力','身体起伏借力','手臂伸太直'],tips:['轻盈重量，专注后束发力','想象用肘部画弧线','顶峰停留感受收缩']},
+  {id:'front-raise',name:'前平举',nameEn:'Front Raise',part:'肩部',muscle:'三角肌前束',equip:'哑铃 / 杠铃片',altEquip:'绳索前平举',sets:'3-4',reps:'12-15',gif:'',steps:['双手持哑铃/杠铃片于大腿前方','手臂微屈，前举至与肩同高','顶峰停留后缓慢下放'],mistakes:['借力摆动','举得过高用斜方肌','动作过快'],tips:['举至下巴高度即可','交替做减少借力','重量宜轻']},
+  {id:'face-pull',name:'面拉',nameEn:'Face Pull',part:'肩部',muscle:'三角肌后束、肩袖肌群',equip:'龙门架 + 绳索',altEquip:'弹力带面拉',sets:'3-4',reps:'12-15',gif:'',steps:['将滑轮调至上胸高度','双手拉住绳索两端','向后拉向面部，双手在耳朵两侧分开','顶峰收缩1-2秒'],mistakes:['重量过大借力','身体后仰','手腕弯曲'],tips:['这是肩袖健康必做动作','轻重量高质量','想象展示二头肌']},
   // 核心
-  {id:'plank',name:'平板支撑',nameEn:'Plank',part:'核心',muscle:'腹直肌、腹横肌、核心整体',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'30-60秒',gif:'https://muscles.wiki/assets/exercises/plank.gif',steps:['俯卧，前臂撑地，肘在肩正下方','身体成一条直线','核心收紧，臀部不要塌陷或抬高','保持正常呼吸'],mistakes:['塌腰','臀部过高','憋气','低头/抬头'],tips:['从30秒开始逐步增加','镜子侧看确认身体成直线','可增加单腿/单臂提升难度']},
-  {id:'crunch',name:'卷腹',nameEn:'Crunch',part:'核心',muscle:'腹直肌（上腹部）',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'15-20',gif:'https://muscles.wiki/assets/exercises/crunch.gif',steps:['仰卧，膝盖弯曲，双脚平放','双手放耳侧（不要抱头）','收紧腹部抬起上背部','顶峰收缩后缓慢下放'],mistakes:['双手用力拉头','下背部离开地面','动作过快'],tips:['眼睛看天花板','仅仅是上背部离地','感受腹肌收缩不是脖子']},
-  {id:'hanging-leg-raise',name:'悬挂举腿',nameEn:'Hanging Leg Raise',part:'核心',muscle:'腹直肌、髋屈肌',equip:'单杠 / 悬挂带',altEquip:'仰卧抬腿 / 罗马椅举腿',sets:'3-4',reps:'10-15',gif:'https://muscles.wiki/assets/exercises/hanging-leg-raise.gif',steps:['双手握住单杠，身体自然下垂','核心收紧，抬腿至腿与地面平行或更高','控制下放至起始位置'],mistakes:['身体摆荡','用惯性甩腿','腿不完全放下'],tips:['先练屈膝举腿降低难度','全程核心收紧','慢下放更有效']},
-  {id:'russian-twist',name:'俄罗斯转体',nameEn:'Russian Twist',part:'核心',muscle:'腹斜肌、腹直肌',equip:'瑜伽垫（可持哑铃/药球）',altEquip:'自重转体',sets:'3-4',reps:'20-30',gif:'https://muscles.wiki/assets/exercises/russian-twist.gif',steps:['坐姿，双腿抬起离开地面','身体后仰约45°','双手在胸前合拢','左右旋转躯干'],mistakes:['只转手臂不转躯干','弓背','用惯性'],tips:['双脚始终离地','旋转从腰腹发起','增加难度可手持轻哑铃']},
-  {id:'dead-bug',name:'死虫式',nameEn:'Dead Bug',part:'核心',muscle:'腹横肌、核心稳定性',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'10-12',gif:'https://muscles.wiki/assets/exercises/dead-bug.gif',steps:['仰卧，四肢向上举起','对侧手臂和腿同时缓慢下放','保持腰部贴紧地面','回到起始位置换另一侧'],mistakes:['腰部离开地面','动作过快','憋气'],tips:['这是最安全的核心训练','全程腰部贴地','想象肚脐向地面压']},
-  {id:'ab-wheel',name:'滚轮',nameEn:'Ab Wheel Rollout',part:'核心',muscle:'腹直肌、腹横肌、背阔肌',equip:'健腹轮',altEquip:'瑜伽球前推 / 跪姿TRX前推',sets:'3-4',reps:'8-12',gif:'https://muscles.wiki/assets/exercises/ab-wheel-rollout.gif',steps:['跪姿，双手握住健腹轮','缓慢向前滚出，身体伸展','核心用力将轮子拉回起始位置'],mistakes:['塌腰','用髋屈肌代偿','滚出太远无法收回'],tips:['从短距离开始练习','全程核心收紧','无法完成可由同伴辅助']}
+  {id:'plank',name:'平板支撑',nameEn:'Plank',part:'核心',muscle:'腹直肌、腹横肌、核心整体',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'30-60秒',gif:'https://exrx.net/AnimatedEx/RectusAbdominis/Plank.gif',steps:['俯卧，前臂撑地，肘在肩正下方','身体成一条直线','核心收紧，臀部不要塌陷或抬高','保持正常呼吸'],mistakes:['塌腰','臀部过高','憋气','低头/抬头'],tips:['从30秒开始逐步增加','镜子侧看确认身体成直线','可增加单腿/单臂提升难度']},
+  {id:'crunch',name:'卷腹',nameEn:'Crunch',part:'核心',muscle:'腹直肌（上腹部）',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'15-20',gif:'https://exrx.net/AnimatedEx/RectusAbdominis/Crunch.gif',steps:['仰卧，膝盖弯曲，双脚平放','双手放耳侧（不要抱头）','收紧腹部抬起上背部','顶峰收缩后缓慢下放'],mistakes:['双手用力拉头','下背部离开地面','动作过快'],tips:['眼睛看天花板','仅仅是上背部离地','感受腹肌收缩不是脖子']},
+  {id:'hanging-leg-raise',name:'悬挂举腿',nameEn:'Hanging Leg Raise',part:'核心',muscle:'腹直肌、髋屈肌',equip:'单杠 / 悬挂带',altEquip:'仰卧抬腿 / 罗马椅举腿',sets:'3-4',reps:'10-15',gif:'',steps:['双手握住单杠，身体自然下垂','核心收紧，抬腿至腿与地面平行或更高','控制下放至起始位置'],mistakes:['身体摆荡','用惯性甩腿','腿不完全放下'],tips:['先练屈膝举腿降低难度','全程核心收紧','慢下放更有效']},
+  {id:'russian-twist',name:'俄罗斯转体',nameEn:'Russian Twist',part:'核心',muscle:'腹斜肌、腹直肌',equip:'瑜伽垫（可持哑铃/药球）',altEquip:'自重转体',sets:'3-4',reps:'20-30',gif:'',steps:['坐姿，双腿抬起离开地面','身体后仰约45°','双手在胸前合拢','左右旋转躯干'],mistakes:['只转手臂不转躯干','弓背','用惯性'],tips:['双脚始终离地','旋转从腰腹发起','增加难度可手持轻哑铃']},
+  {id:'dead-bug',name:'死虫式',nameEn:'Dead Bug',part:'核心',muscle:'腹横肌、核心稳定性',equip:'瑜伽垫',altEquip:'无需器械',sets:'3-4',reps:'10-12',gif:'',steps:['仰卧，四肢向上举起','对侧手臂和腿同时缓慢下放','保持腰部贴紧地面','回到起始位置换另一侧'],mistakes:['腰部离开地面','动作过快','憋气'],tips:['这是最安全的核心训练','全程腰部贴地','想象肚脐向地面压']},
+  {id:'ab-wheel',name:'滚轮',nameEn:'Ab Wheel Rollout',part:'核心',muscle:'腹直肌、腹横肌、背阔肌',equip:'健腹轮',altEquip:'瑜伽球前推 / 跪姿TRX前推',sets:'3-4',reps:'8-12',gif:'',steps:['跪姿，双手握住健腹轮','缓慢向前滚出，身体伸展','核心用力将轮子拉回起始位置'],mistakes:['塌腰','用髋屈肌代偿','滚出太远无法收回'],tips:['从短距离开始练习','全程核心收紧','无法完成可由同伴辅助']}
 ];
 
 const BODY_PARTS = ['练背','练腿','练胸','手臂','肩部','核心'];
@@ -546,6 +546,7 @@ let timerInterval = null;
 let timerRemaining = 90;
 let currentChart = null;
 let currentPieChart = null;
+let currentTrainingExercises = [];
 
 // ============ HELPERS ============
 function getWeeklyCount() {
@@ -761,6 +762,7 @@ function renderHome() {
 
 function quickStart(part) {
   selectedTrainingParts = [part];
+  currentTrainingExercises = EXERCISES.filter(e => e.part === part).map(e => e.id);
   switchPage('training');
 }
 
@@ -785,7 +787,7 @@ function renderTrainingPage() {
     return;
   }
 
-  const exercises = EXERCISES.filter(e => selectedTrainingParts.includes(e.part));
+  const exercises = currentTrainingExercises.map(id => EXERCISES.find(e => e.id === id)).filter(Boolean);
   const logs = getLogs();
   const lastLog = logs.length > 0 ? logs[logs.length-1] : null;
 
@@ -793,7 +795,7 @@ function renderTrainingPage() {
     <div style="padding-top:12px">
       <div class="flex-between mb16">
         <div>
-          <span style="font-weight:700;font-size:1.1rem">${selectedTrainingParts.map(p=>PART_EMOJI[p]+' '+p).join(' · ')}</span>
+          <span style="font-weight:700;font-size:1.1rem">${selectedTrainingParts.length ? selectedTrainingParts.map(p=>PART_EMOJI[p]+' '+p).join(' · ') : '自定义训练'}</span>
         </div>
         <div class="flex-between gap8">
           <button class="btn btn-secondary btn-sm" onclick="selectTrainingPart('')">切换</button>
@@ -808,11 +810,15 @@ function renderTrainingPage() {
     html += `
     <div class="card" data-exercise="${e.id}">
       <div class="flex-between mb8">
-        <div>
+        <div style="flex:1;min-width:0">
           <span style="font-weight:700;font-size:0.95rem">${e.name}</span>
           <span style="font-size:0.72rem;color:var(--text3);margin-left:4px">${e.nameEn}</span>
         </div>
-        <span style="font-size:0.73rem;color:var(--text2)">${e.sets}组×${e.reps}次</span>
+        <div style="display:flex;gap:4px;align-items:center;flex-shrink:0">
+          <span style="font-size:0.73rem;color:var(--text2)">${e.sets}组×${e.reps}次</span>
+          <button class="btn-icon-sm" onclick="replaceExercise('${e.id}')" title="替换动作" style="font-size:0.85rem;padding:2px 4px;line-height:1">🔄</button>
+          <button class="btn-icon-sm" onclick="deleteExercise('${e.id}')" title="删除动作" style="font-size:0.85rem;padding:2px 4px;line-height:1">🗑️</button>
+        </div>
       </div>
       ${lastData ? `<div style="font-size:0.72rem;color:var(--text3);margin-bottom:8px;padding:6px 10px;background:var(--bg2);border-radius:6px">上次：${lastData.sets.map(s=>`${s.weight||'-'}kg×${s.reps||'-'}`).join(' | ')}</div>` : ''}
       <div class="set-rows" id="sets-${e.id}"></div>
@@ -821,6 +827,7 @@ function renderTrainingPage() {
   });
 
   html += `
+    <button class="btn btn-secondary mt8" onclick="addExerciseToTraining()" style="width:100%;border:1px dashed var(--border);padding:12px">+ 添加动作</button>
     <div class="mt16"><label>📝 训练备注</label><textarea id="trainingNotes" placeholder="今天的训练感受..."></textarea></div>
     <button class="btn btn-primary mt16" id="btnSaveTraining">✅ 完成训练</button>
     <div class="section-title">📜 历史记录</div>
@@ -842,10 +849,24 @@ function renderTrainingPage() {
 }
 
 function selectTrainingPart(part) {
-  if (part === '') { selectedTrainingParts = []; }
+  if (part === '') { selectedTrainingParts = []; currentTrainingExercises = []; }
   else if (selectedTrainingParts.includes(part)) { selectedTrainingParts = selectedTrainingParts.filter(p=>p!==part); }
   else { selectedTrainingParts.push(part); }
+  syncTrainingExercises();
   renderTrainingPage();
+}
+
+function syncTrainingExercises() {
+  if (selectedTrainingParts.length === 0) return;
+  const partSet = new Set(selectedTrainingParts);
+  const existingIds = new Set(currentTrainingExercises);
+  // Add exercises from selected parts that aren't already in the list
+  EXERCISES.filter(e => partSet.has(e.part)).forEach(e => existingIds.add(e.id));
+  // Remove exercises whose part is no longer selected
+  currentTrainingExercises = [...existingIds].filter(id => {
+    const ex = EXERCISES.find(e => e.id === id);
+    return ex && partSet.has(ex.part);
+  });
 }
 
 function addTrainingSet(exId) {
@@ -861,6 +882,68 @@ function addTrainingSet(exId) {
     <div class="set-done" onclick="this.classList.toggle('done');startTimer()" title="完成"></div>
   `;
   container.appendChild(row);
+}
+
+function deleteExercise(exId) {
+  if (!confirm('确认移除这个动作？')) return;
+  currentTrainingExercises = currentTrainingExercises.filter(id => id !== exId);
+  if (currentTrainingExercises.length === 0) {
+    showToast('已移除最后一个动作，返回部位选择');
+    selectedTrainingParts = [];
+  }
+  renderTrainingPage();
+}
+
+function replaceExercise(exId) {
+  const currentEx = EXERCISES.find(e => e.id === exId);
+  if (!currentEx) return;
+  const alternatives = EXERCISES.filter(e => e.part === currentEx.part && e.id !== exId);
+  if (!alternatives.length) { showToast('该部位暂无其他动作可替换'); return; }
+  let html = `<p style="color:var(--text2);margin-bottom:12px">将 <strong>${currentEx.name}</strong> 替换为：</p>`;
+  alternatives.forEach(e => {
+    html += `<div class="card" style="padding:10px 14px;cursor:pointer;margin-bottom:8px" onclick="confirmReplaceExercise('${exId}','${e.id}')">
+      <span style="font-weight:700">${e.name}</span>
+      <span style="font-size:0.72rem;color:var(--text3);margin-left:6px">${e.nameEn}</span>
+      <span style="font-size:0.73rem;color:var(--text2);float:right">${e.muscle}</span>
+    </div>`;
+  });
+  showModal('🔄 替换动作', html);
+}
+
+function confirmReplaceExercise(oldId, newId) {
+  const idx = currentTrainingExercises.indexOf(oldId);
+  if (idx === -1) return;
+  currentTrainingExercises[idx] = newId;
+  closeModal();
+  renderTrainingPage();
+  showToast('已替换动作');
+}
+
+function addExerciseToTraining() {
+  const currentParts = [...new Set(currentTrainingExercises.map(id => EXERCISES.find(e => e.id === id)).filter(Boolean).map(e => e.part))];
+  let html = '<div class="section-title" style="margin-top:0">选择要添加的动作</div>';
+  BODY_PARTS.forEach(part => {
+    const partExercises = EXERCISES.filter(e => e.part === part && !currentTrainingExercises.includes(e.id));
+    if (!partExercises.length) return;
+    html += `<div style="margin-bottom:8px"><span style="font-weight:700;font-size:0.85rem;color:var(--text2)">${PART_EMOJI[part]} ${part}</span></div>`;
+    partExercises.forEach(e => {
+      html += `<div class="card" style="padding:10px 14px;cursor:pointer;margin-bottom:6px" onclick="confirmAddExercise('${e.id}')">
+        <span style="font-weight:700">${e.name}</span>
+        <span style="font-size:0.72rem;color:var(--text3);margin-left:6px">${e.nameEn}</span>
+        <span style="font-size:0.73rem;color:var(--text2);float:right">${e.muscle}</span>
+      </div>`;
+    });
+  });
+  showModal('➕ 添加动作', html);
+}
+
+function confirmAddExercise(exId) {
+  currentTrainingExercises.push(exId);
+  const e = EXERCISES.find(x => x.id === exId);
+  if (e && !selectedTrainingParts.includes(e.part)) selectedTrainingParts.push(e.part);
+  closeModal();
+  renderTrainingPage();
+  showToast('已添加 ' + (e ? e.name : '动作'));
 }
 
 function collectTrainingSets() {
@@ -887,7 +970,7 @@ function saveTraining() {
   const logs = getLogs();
   logs.push({
     date: new Date().toISOString(),
-    bodyParts: [...selectedTrainingParts],
+    bodyParts: [...new Set(exercises.map(e => e.part))],
     exercises,
     notes: document.getElementById('trainingNotes')?.value || '',
   });
@@ -920,6 +1003,10 @@ function copyLastTraining() {
   if (!logs.length) return;
   const last = logs[logs.length-1];
   selectedTrainingParts = [...last.bodyParts];
+  currentTrainingExercises = last.exercises.map(e => {
+    const ex = EXERCISES.find(x => x.name === e.name);
+    return ex ? ex.id : null;
+  }).filter(Boolean);
   renderTrainingPage();
   setTimeout(() => {
     last.exercises.forEach(e => {
@@ -994,176 +1081,33 @@ function renderExerciseList() {
   `).join('');
 }
 
-function drawExercisePlaceholder(canvas, part) {
+function drawExercisePlaceholder(canvas, name, muscle) {
   const ctx = canvas.getContext('2d');
   const w = canvas.width;
   const h = canvas.height;
-  const cx = w / 2;
 
-  // Background
-  ctx.fillStyle = '#14141e';
+  // Black background
+  ctx.fillStyle = '#0a0a10';
   ctx.fillRect(0, 0, w, h);
 
-  // Subtle grid
-  ctx.strokeStyle = 'rgba(255,255,255,0.025)';
-  ctx.lineWidth = 0.5;
-  const gridSize = 25;
-  for (let x = gridSize; x < w; x += gridSize) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
-  for (let y = gridSize; y < h; y += gridSize) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
-
-  // Radial glow behind body
-  const glow = ctx.createRadialGradient(cx, 90, 10, cx, 90, 140);
-  glow.addColorStop(0, 'rgba(255,255,255,0.06)');
-  glow.addColorStop(1, 'rgba(255,255,255,0)');
-  ctx.fillStyle = glow;
+  // Subtle vignette
+  const vignette = ctx.createRadialGradient(w/2, h/2, w*0.3, w/2, h/2, w*0.7);
+  vignette.addColorStop(0, 'rgba(255,255,255,0)');
+  vignette.addColorStop(1, 'rgba(0,0,0,0.6)');
+  ctx.fillStyle = vignette;
   ctx.fillRect(0, 0, w, h);
 
-  // Muscle highlight colors
-  const colors = {
-    '练背': { fill: 'rgba(91,141,239,0.25)', stroke: 'rgba(91,141,239,0.7)' },
-    '练腿': { fill: 'rgba(168,85,247,0.25)', stroke: 'rgba(168,85,247,0.7)' },
-    '练胸': { fill: 'rgba(248,113,113,0.25)', stroke: 'rgba(248,113,113,0.7)' },
-    '手臂': { fill: 'rgba(251,191,36,0.25)',  stroke: 'rgba(251,191,36,0.7)' },
-    '肩部': { fill: 'rgba(52,211,153,0.25)', stroke: 'rgba(52,211,153,0.7)' },
-    '核心': { fill: 'rgba(251,146,60,0.25)', stroke: 'rgba(251,146,60,0.7)' },
-  };
-  const c = colors[part] || colors['练胸'];
+  // Exercise name - white large text
+  ctx.fillStyle = '#FFFFFF';
+  ctx.font = 'bold 22px "PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(name, w/2, h/2 - 12);
 
-  // Draw body outline (thin white)
-  ctx.strokeStyle = 'rgba(255,255,255,0.5)';
-  ctx.lineWidth = 1.3;
-  ctx.lineCap = 'round';
-  ctx.lineJoin = 'round';
-
-  // Head
-  ctx.beginPath();
-  ctx.arc(cx, 26, 12, Math.PI, 0);
-  ctx.stroke();
-
-  // Neck + trapezius
-  ctx.beginPath();
-  ctx.moveTo(cx - 3, 38); ctx.lineTo(cx - 32, 48);
-  ctx.moveTo(cx + 3, 38); ctx.lineTo(cx + 32, 48);
-  ctx.stroke();
-
-  // Torso
-  ctx.beginPath();
-  ctx.moveTo(cx - 32, 48);
-  ctx.quadraticCurveTo(cx - 36, 70, cx - 28, 95);
-  ctx.quadraticCurveTo(cx - 22, 115, cx - 20, 128);
-  ctx.moveTo(cx + 32, 48);
-  ctx.quadraticCurveTo(cx + 36, 70, cx + 28, 95);
-  ctx.quadraticCurveTo(cx + 22, 115, cx + 20, 128);
-  ctx.stroke();
-
-  // Waist
-  ctx.beginPath();
-  ctx.moveTo(cx - 20, 128); ctx.lineTo(cx + 20, 128);
-  ctx.stroke();
-
-  // Left arm
-  ctx.beginPath();
-  ctx.moveTo(cx - 32, 48);
-  ctx.quadraticCurveTo(cx - 56, 68, cx - 58, 94);
-  ctx.quadraticCurveTo(cx - 56, 110, cx - 48, 130);
-  ctx.stroke();
-
-  // Right arm
-  ctx.beginPath();
-  ctx.moveTo(cx + 32, 48);
-  ctx.quadraticCurveTo(cx + 56, 68, cx + 58, 94);
-  ctx.quadraticCurveTo(cx + 56, 110, cx + 48, 130);
-  ctx.stroke();
-
-  // Left leg
-  ctx.beginPath();
-  ctx.moveTo(cx - 12, 128);
-  ctx.quadraticCurveTo(cx - 18, 155, cx - 20, 185);
-  ctx.stroke();
-
-  // Right leg
-  ctx.beginPath();
-  ctx.moveTo(cx + 12, 128);
-  ctx.quadraticCurveTo(cx + 18, 155, cx + 20, 185);
-  ctx.stroke();
-
-  // --- Highlight target muscle zone ---
-  ctx.strokeStyle = c.stroke;
-  ctx.lineWidth = 2;
-  ctx.fillStyle = c.fill;
-
-  if (part === '练背') {
-    // Upper/mid back
-    ctx.beginPath();
-    ctx.moveTo(cx - 24, 52);
-    ctx.quadraticCurveTo(cx - 30, 80, cx - 22, 110);
-    ctx.lineTo(cx + 22, 110);
-    ctx.quadraticCurveTo(cx + 30, 80, cx + 24, 52);
-    ctx.closePath(); ctx.fill(); ctx.stroke();
-    // Lats
-    ctx.beginPath();
-    ctx.moveTo(cx - 28, 70); ctx.quadraticCurveTo(cx - 34, 100, cx - 24, 120);
-    ctx.lineTo(cx - 18, 120); ctx.quadraticCurveTo(cx - 22, 100, cx - 20, 70); ctx.closePath();
-    ctx.fill(); ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(cx + 28, 70); ctx.quadraticCurveTo(cx + 34, 100, cx + 24, 120);
-    ctx.lineTo(cx + 18, 120); ctx.quadraticCurveTo(cx + 22, 100, cx + 20, 70); ctx.closePath();
-    ctx.fill(); ctx.stroke();
-  } else if (part === '练胸') {
-    // Chest
-    ctx.beginPath();
-    ctx.ellipse(cx - 13, 70, 17, 22, -0.2, 0, Math.PI * 2);
-    ctx.fill(); ctx.stroke();
-    ctx.beginPath();
-    ctx.ellipse(cx + 13, 70, 17, 22, 0.2, 0, Math.PI * 2);
-    ctx.fill(); ctx.stroke();
-  } else if (part === '练腿') {
-    // Quads
-    ctx.beginPath();
-    ctx.moveTo(cx - 14, 132); ctx.quadraticCurveTo(cx - 20, 158, cx - 18, 175);
-    ctx.lineTo(cx - 6, 175); ctx.quadraticCurveTo(cx - 8, 158, cx - 2, 132); ctx.closePath();
-    ctx.fill(); ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(cx + 14, 132); ctx.quadraticCurveTo(cx + 20, 158, cx + 18, 175);
-    ctx.lineTo(cx + 6, 175); ctx.quadraticCurveTo(cx + 8, 158, cx + 2, 132); ctx.closePath();
-    ctx.fill(); ctx.stroke();
-  } else if (part === '手臂') {
-    // Biceps + forearms
-    ctx.beginPath();
-    ctx.ellipse(cx - 56, 78, 12, 18, -0.3, 0, Math.PI * 2);
-    ctx.fill(); ctx.stroke();
-    ctx.beginPath();
-    ctx.ellipse(cx + 56, 78, 12, 18, 0.3, 0, Math.PI * 2);
-    ctx.fill(); ctx.stroke();
-    ctx.beginPath();
-    ctx.ellipse(cx - 52, 112, 9, 16, 0.2, 0, Math.PI * 2);
-    ctx.fill(); ctx.stroke();
-    ctx.beginPath();
-    ctx.ellipse(cx + 52, 112, 9, 16, -0.2, 0, Math.PI * 2);
-    ctx.fill(); ctx.stroke();
-  } else if (part === '肩部') {
-    // Deltoids
-    ctx.beginPath();
-    ctx.arc(cx - 32, 50, 16, 0.8, 2.2);
-    ctx.fill(); ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(cx + 32, 50, 16, 0.9, 2.3);
-    ctx.fill(); ctx.stroke();
-  } else if (part === '核心') {
-    // Abs
-    ctx.beginPath();
-    ctx.roundRect(cx - 14, 62, 28, 62, 10);
-    ctx.fill(); ctx.stroke();
-    // Ab lines
-    ctx.strokeStyle = c.stroke;
-    ctx.lineWidth = 0.8;
-    ctx.setLineDash([4, 6]);
-    for (let ly = 78; ly < 118; ly += 12) {
-      ctx.beginPath(); ctx.moveTo(cx - 10, ly); ctx.lineTo(cx + 10, ly); ctx.stroke();
-    }
-    ctx.setLineDash([]);
-    ctx.beginPath(); ctx.moveTo(cx, 64); ctx.lineTo(cx, 122); ctx.stroke();
-  }
+  // Target muscle - lighter below
+  ctx.fillStyle = 'rgba(255,255,255,0.45)';
+  ctx.font = '14px "PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif';
+  ctx.fillText(muscle, w/2, h/2 + 18);
 }
 
 // Update the showExerciseDetail function
@@ -1174,7 +1118,7 @@ function showExerciseDetail(id) {
     <div style="margin:-24px -20px 0">
       <div style="position:relative;width:100%;height:200px;overflow:hidden;background:#14141e">
         <canvas id="ph-${e.id}" width="800" height="200" style="width:100%;height:200px;display:block"></canvas>
-        <img src="${e.gif}" alt="${e.name}" style="position:absolute;inset:0;width:100%;height:200px;object-fit:contain;background:#14141e;display:none" loading="lazy" onload="var c=document.getElementById('ph-${e.id}');if(c)c.style.display='none';this.style.display='block'" onerror="this.remove()">
+        ${e.gif ? `<img src="${e.gif}" alt="${e.name}" style="position:absolute;inset:0;width:100%;height:200px;object-fit:contain;background:#14141e;display:none" loading="lazy" onload="var c=document.getElementById('ph-${e.id}');if(c)c.style.display='none';this.style.display='block'" onerror="this.remove()">` : ''}
       </div>
       <div style="padding:20px">
         <div class="detail-title">${e.name}</div>
@@ -1192,7 +1136,7 @@ function showExerciseDetail(id) {
   showModal('', html);
   setTimeout(() => {
     const canvas = document.getElementById('ph-' + e.id);
-    if (canvas) drawExercisePlaceholder(canvas, e.part);
+    if (canvas) drawExercisePlaceholder(canvas, e.name, e.muscle);
   }, 80);
 }
 
